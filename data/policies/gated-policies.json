@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "id": "POL-IR-010",
+      "title": "Incident Response Plan (Detailed)",
+      "summary": "Roles, escalation, communications, and playbooks for incident handling (detailed version).",
+      "status": "DRAFT",
+      "updated": "2026-01-02"
+    },
+    {
+      "id": "POL-SDLC-011",
+      "title": "Secure SDLC Standard",
+      "summary": "Secure development requirements, code review expectations, and release approval workflow.",
+      "status": "DRAFT",
+      "updated": "2026-01-05"
+    }
+  ]
+}

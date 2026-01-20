@@ -24,3 +24,40 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+@keyframes bgDots {
+  0% { background-position: 0 0; }
+  100% { background-position: 140px 220px; }
+}
+
+@keyframes blob1 {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  33% { transform: translate3d(60px, 30px, 0) scale(1.08); }
+  66% { transform: translate3d(20px, 70px, 0) scale(0.98); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes blob2 {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  33% { transform: translate3d(-50px, 40px, 0) scale(1.06); }
+  66% { transform: translate3d(-20px, -30px, 0) scale(0.98); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes blob3 {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  33% { transform: translate3d(30px, -40px, 0) scale(1.08); }
+  66% { transform: translate3d(-40px, -10px, 0) scale(0.98); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes sheen {
+  0% { transform: translate3d(-6%, 0, 0) rotate(0deg); opacity: 0.08; }
+  50% { transform: translate3d(6%, 0, 0) rotate(12deg); opacity: 0.12; }
+  100% { transform: translate3d(-6%, 0, 0) rotate(0deg); opacity: 0.08; }
+}
+
+.animate-bg-dots { animation: bgDots 18s linear infinite; }
+.animate-blob-1 { animation: blob1 16s ease-in-out infinite; }
+.animate-blob-2 { animation: blob2 18s ease-in-out infinite; }
+.animate-blob-3 { animation: blob3 20s ease-in-out infinite; }
+.animate-sheen { animation: sheen 14s ease-in-out infinite; }

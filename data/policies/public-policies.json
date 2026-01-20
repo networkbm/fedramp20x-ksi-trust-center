@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "id": "POL-SEC-001",
+      "title": "Information Security Policy",
+      "summary": "High-level security objectives, roles, and responsibilities for protecting systems and data.",
+      "status": "PUBLISHED",
+      "updated": "2026-01-12"
+    },
+    {
+      "id": "POL-ACC-002",
+      "title": "Access Control Policy",
+      "summary": "Account lifecycle, least privilege, authentication requirements, and access review cadence.",
+      "status": "PUBLISHED",
+      "updated": "2026-01-10"
+    },
+    {
+      "id": "POL-LOG-003",
+      "title": "Logging & Monitoring Policy",
+      "summary": "Centralized logging, alerting, retention, and review requirements aligned to auditability needs.",
+      "status": "PUBLISHED",
+      "updated": "2026-01-08"
+    }
+  ]
+}

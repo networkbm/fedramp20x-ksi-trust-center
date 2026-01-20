@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "framework": "FedRAMP 20x Key Security Indicators",
+    "environment": "demo",
+    "last_updated": "2026-01-16",
+    "notes": "Status values are for demonstration purposes only and do not represent an official FedRAMP authorization."
+  },
+
+  "statuses": {
+    "KSI-IAM-01": {
+      "status": "PASS",
+      "last_verified": "2026-01-10",
+      "summary": "Multi-factor authentication is enforced for all privileged and remote access users.",
+      "evidence": [
+        "iam-mfa-report.pdf",
+        "privileged-access-review-q4.pdf"
+      ]
+    },
+
+    "KSI-IAM-02": {
+      "status": "PASS",
+      "last_verified": "2026-01-08",
+      "summary": "User accounts are provisioned, reviewed, and deprovisioned according to documented procedures.",
+      "evidence": [
+        "account-lifecycle-procedure.pdf",
+        "access-review-log.csv"
+      ]
+    },
+
+    "KSI-LOG-01": {
+      "status": "PASS",
+      "last_verified": "2026-01-12",
+      "summary": "Centralized audit logging is enabled and logs are retained according to policy.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "log-retention-policy.pdf"
+      ]
+    },
+
+    "KSI-VULN-01": {
+      "status": "PENDING",
+      "last_verified": "2026-01-05",
+      "summary": "Automated vulnerability scanning is in place, but remediation SLAs are still being finalized.",
+      "evidence": [
+        "vulnerability-scan-summary.pdf"
+      ]
+    },
+
+    "KSI-ASSET-01": {
+      "status": "PASS",
+      "last_verified": "2026-01-09",
+      "summary": "An inventory of in-scope system assets is maintained and reviewed regularly.",
+      "evidence": [
+        "asset-inventory.csv"
+      ]
+    },
+
+    "KSI-IR-01": {
+      "status": "FAIL",
+      "last_verified": "2026-01-02",
+      "summary": "An incident response plan exists, but no evidence of recent testing or tabletop exercises was found.",
+      "evidence": [
+        "incident-response-plan.pdf"
+      ]
+    }
+  }
+}

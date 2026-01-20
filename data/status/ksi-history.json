@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "granularity": "daily",
+    "range_days": 14,
+    "notes": "Demo trend data for PASS/FAIL/PENDING over time."
+  },
+  "points": [
+    { "date": "2026-01-03", "PASS": 0, "FAIL": 1, "PENDING": 66 },
+    { "date": "2026-01-04", "PASS": 0, "FAIL": 1, "PENDING": 66 },
+    { "date": "2026-01-05", "PASS": 0, "FAIL": 1, "PENDING": 66 },
+    { "date": "2026-01-06", "PASS": 1, "FAIL": 1, "PENDING": 65 },
+    { "date": "2026-01-07", "PASS": 1, "FAIL": 1, "PENDING": 65 },
+    { "date": "2026-01-08", "PASS": 2, "FAIL": 1, "PENDING": 64 },
+    { "date": "2026-01-09", "PASS": 2, "FAIL": 1, "PENDING": 64 },
+    { "date": "2026-01-10", "PASS": 2, "FAIL": 0, "PENDING": 65 },
+    { "date": "2026-01-11", "PASS": 2, "FAIL": 0, "PENDING": 65 },
+    { "date": "2026-01-12", "PASS": 2, "FAIL": 0, "PENDING": 65 },
+    { "date": "2026-01-13", "PASS": 2, "FAIL": 0, "PENDING": 65 },
+    { "date": "2026-01-14", "PASS": 2, "FAIL": 0, "PENDING": 65 },
+    { "date": "2026-01-15", "PASS": 2, "FAIL": 0, "PENDING": 65 },
+    { "date": "2026-01-16", "PASS": 2, "FAIL": 0, "PENDING": 65 }
+  ]
+}
