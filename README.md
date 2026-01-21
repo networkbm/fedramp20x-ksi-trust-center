@@ -26,3 +26,11 @@ Install dependencies:
 npm install
 npm run dev
 ```
+## Screenshots
+![Trust Center Overview](screenshots/trust-overview.png)
+
+![Compliance Dashboard](screenshots/compliance-dashboard.png)
+
+![KSI Detail Page](screenshots/ksi-detail.png)
+
+![Console Dashboard](screenshots/console-dashboard.png)
