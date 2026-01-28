@@ -35,3 +35,7 @@ npm run dev
 ![KSI Detail Page](screenshots/ksi-detail.png)
 
 ![Console Dashboard](screenshots/console-dashboard.png)
+
+![Console Dashboard](screenshots/KSI-validation-1.png)
+
+![Console Dashboard](screenshots/KSI-validation-2.png)
