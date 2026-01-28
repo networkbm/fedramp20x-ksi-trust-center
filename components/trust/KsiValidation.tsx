@@ -82,7 +82,7 @@ export default function KsiValidation({ ksiId }: { ksiId: string }) {
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <div className="text-sm font-semibold">Validation</div>
-          <div className="mt-1 text-xs text-white/50">Assessor attestation for this KSI (demo-local)</div>
+          <div className="mt-1 text-xs text-white/50">Assessor attestation for this KSI</div>
         </div>
 
         <div className="flex items-center gap-2">
