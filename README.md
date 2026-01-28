@@ -17,6 +17,7 @@ It includes PASS / FAIL / PENDING status tracking, evidence linking, and dashboa
   - Donut breakdown (PASS/FAIL/PENDING)
   - Trend line over time (demo history)
 - Evidence linking (demo files served from /public)
+- 3PAO KSI validation
 
 ## Getting Started
 
