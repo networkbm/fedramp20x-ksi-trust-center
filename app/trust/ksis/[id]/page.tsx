@@ -1,6 +1,7 @@
 import { loadKsis } from "@/lib/data/loadKsis";
 import { loadStatuses } from "@/lib/data/loadStatuses";
 import { mergeKsiView } from "@/lib/data/mergeKsiView";
+import KsiValidation from "@/components/trust/KsiValidation";
 
 function ballClass(status: "PASS" | "FAIL" | "PENDING") {
   if (status === "PASS") return "bg-emerald-400 shadow-[0_0_18px_rgba(52,211,153,0.45)]";
@@ -122,6 +123,7 @@ export default async function KsiDetailPage({ params }: { params: Promise<{ id: 
           )}
         </div>
       </section>
+      <KsiValidation ksiId={ksi.id} />
 
       <section className="rounded-2xl border border-white/10 bg-white/5 p-4 text-xs text-white/50">
         This page presents demonstration-only status data and does not represent an official FedRAMP assessment or authorization.
