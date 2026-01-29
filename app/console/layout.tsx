@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function ConsoleLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-[#0b0e14] text-[#e6e8ee]">
+    <div className="min-h-screen text-[#e6e8ee]">
       <BackgroundFX />
 
       <div className="mx-auto max-w-7xl px-6 py-10">

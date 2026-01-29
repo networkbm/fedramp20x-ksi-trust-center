@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #070a12;
+  --foreground: #e6e8ee;
+  --muted: rgba(230, 232, 238, 0.65);
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-2: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.10);
 }
 
 @theme inline {
@@ -12,52 +16,113 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-  background: var(--background);
+  background: transparent;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: inherit;
 }
+
+.section-container {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: #0f1117;
+  padding: 1.5rem;
+}
+
 @keyframes bgDots {
-  0% { background-position: 0 0; }
-  100% { background-position: 140px 220px; }
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 140px 220px;
+  }
 }
 
 @keyframes blob1 {
-  0% { transform: translate3d(0, 0, 0) scale(1); }
-  33% { transform: translate3d(60px, 30px, 0) scale(1.08); }
-  66% { transform: translate3d(20px, 70px, 0) scale(0.98); }
-  100% { transform: translate3d(0, 0, 0) scale(1); }
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(60px, 30px, 0) scale(1.08);
+  }
+  66% {
+    transform: translate3d(20px, 70px, 0) scale(0.98);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
 }
 
 @keyframes blob2 {
-  0% { transform: translate3d(0, 0, 0) scale(1); }
-  33% { transform: translate3d(-50px, 40px, 0) scale(1.06); }
-  66% { transform: translate3d(-20px, -30px, 0) scale(0.98); }
-  100% { transform: translate3d(0, 0, 0) scale(1); }
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(-50px, 40px, 0) scale(1.06);
+  }
+  66% {
+    transform: translate3d(-20px, -30px, 0) scale(0.98);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
 }
 
 @keyframes blob3 {
-  0% { transform: translate3d(0, 0, 0) scale(1); }
-  33% { transform: translate3d(30px, -40px, 0) scale(1.08); }
-  66% { transform: translate3d(-40px, -10px, 0) scale(0.98); }
-  100% { transform: translate3d(0, 0, 0) scale(1); }
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(30px, -40px, 0) scale(1.08);
+  }
+  66% {
+    transform: translate3d(-40px, -10px, 0) scale(0.98);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
 }
 
 @keyframes sheen {
-  0% { transform: translate3d(-6%, 0, 0) rotate(0deg); opacity: 0.08; }
-  50% { transform: translate3d(6%, 0, 0) rotate(12deg); opacity: 0.12; }
-  100% { transform: translate3d(-6%, 0, 0) rotate(0deg); opacity: 0.08; }
+  0% {
+    transform: translate3d(-6%, 0, 0) rotate(0deg);
+    opacity: 0.08;
+  }
+  50% {
+    transform: translate3d(6%, 0, 0) rotate(12deg);
+    opacity: 0.12;
+  }
+  100% {
+    transform: translate3d(-6%, 0, 0) rotate(0deg);
+    opacity: 0.08;
+  }
 }
 
-.animate-bg-dots { animation: bgDots 18s linear infinite; }
-.animate-blob-1 { animation: blob1 16s ease-in-out infinite; }
-.animate-blob-2 { animation: blob2 18s ease-in-out infinite; }
-.animate-blob-3 { animation: blob3 20s ease-in-out infinite; }
-.animate-sheen { animation: sheen 14s ease-in-out infinite; }
+.animate-bg-dots {
+  animation: bgDots 18s linear infinite;
+}
+
+.animate-blob-1 {
+  animation: blob1 16s ease-in-out infinite;
+}
+
+.animate-blob-2 {
+  animation: blob2 18s ease-in-out infinite;
+}
+
+.animate-blob-3 {
+  animation: blob3 20s ease-in-out infinite;
+}
+
+.animate-sheen {
+  animation: sheen 14s ease-in-out infinite;
+}

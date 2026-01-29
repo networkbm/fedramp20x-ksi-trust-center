@@ -39,3 +39,5 @@ npm run dev
 ![Console Dashboard](screenshots/KSI-validation-1.png)
 
 ![Console Dashboard](screenshots/KSI-validation-2.png)
+
+![Console Dashboard](screenshots/Trust-Center-new-UI.png)
