@@ -6,6 +6,7 @@ import StatusDonut from "@/components/charts/StatusDonut";
 import StatusTrend from "@/components/charts/StatusTrend";
 import { loadHistory } from "@/lib/data/loadHistory";
 import KsiListClient from "@/components/trust/KsiListClient";
+import { ComplianceIcon, OverviewIcon } from "@/components/ui/SectionIcons";
 
 
 function ballClass(status: "PASS" | "FAIL" | "PENDING") {
@@ -24,13 +25,13 @@ export default async function TrustCompliancePage() {
 
   return (
     <div className="space-y-6">
-      <section className="rounded-2xl border border-white/10 bg-[#0f1117] p-6">
-        <div className="text-sm text-white/60">Compliance</div>
+      <section className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-6">
+        <div className="flex items-center gap-2 text-sm text-white/60">
+          <ComplianceIcon className="h-3.5 w-3.5" />
+          <span>Compliance</span>
+        </div>
         <h1 className="mt-2 text-2xl font-semibold tracking-tight">FedRAMP 20x Key Security Indicators</h1>
-        <p className="mt-3 max-w-3xl text-sm leading-6 text-white/70">
-          KSI definitions are sourced from FedRAMP documentation. Status values are demonstration-only and intended to
-          show how a Trust Center can present PASS/FAIL/PENDING outcomes in a clean, auditable way.
-        </p>
+        <p className="mt-3 max-w-3xl text-sm leading-6 text-white/70">Demo Data</p>
 
         <div className="mt-6 grid gap-4 lg:grid-cols-3">
   <div className="lg:col-span-1">
@@ -38,8 +39,11 @@ export default async function TrustCompliancePage() {
   </div>
 
   <div className="lg:col-span-2">
-    <div className="rounded-2xl border border-white/10 bg-[#0f1117] p-5">
-      <div className="text-sm font-semibold">Overview</div>
+    <div className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-5">
+      <div className="flex items-center gap-2 text-sm font-semibold">
+        <OverviewIcon className="h-4 w-4" />
+        <span>Overview</span>
+      </div>
       <div className="mt-1 text-xs text-white/50">Counts based on KSI status mapping</div>
 
       <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

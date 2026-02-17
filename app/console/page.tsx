@@ -5,6 +5,7 @@ import { loadStatuses } from "@/lib/data/loadStatuses";
 import { loadHistory } from "@/lib/data/loadHistory";
 import { mergeKsiView } from "@/lib/data/mergeKsiView";
 import { computeStatusCounts } from "@/lib/scoring/computeSummary";
+import { ComplianceIcon, TrustCenterIcon } from "@/components/ui/SectionIcons";
 
 export default async function ConsoleHome() {
   const ksis = await loadKsis();
@@ -32,34 +33,40 @@ export default async function ConsoleHome() {
       <section className="grid gap-4 md:grid-cols-3">
         <a
           href="/trust/compliance"
-          className="rounded-2xl border border-white/10 bg-[#0f1117] p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.04]"
+          className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.04]"
         >
           <div className="text-xs text-white/60">Quick Action</div>
-          <div className="mt-2 text-sm font-semibold">Review KSIs</div>
+          <div className="mt-2 flex items-center gap-2 text-sm font-semibold">
+            <ComplianceIcon />
+            <span>Review KSIs</span>
+          </div>
           <div className="mt-2 text-sm text-white/60">Open the KSI list with filters and search.</div>
         </a>
 
         <a
           href="/trust/compliance"
-          className="rounded-2xl border border-white/10 bg-[#0f1117] p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.04]"
+          className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.04]"
         >
           <div className="text-xs text-white/60">Quick Action</div>
-          <div className="mt-2 text-sm font-semibold">Export (Demo)</div>
+          <div className="mt-2 text-sm font-semibold">Demo Data</div>
           <div className="mt-2 text-sm text-white/60">Placeholder for CSV/PDF export workflow.</div>
         </a>
 
         <a
           href="/trust"
-          className="rounded-2xl border border-white/10 bg-[#0f1117] p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.04]"
+          className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.04]"
         >
           <div className="text-xs text-white/60">Quick Action</div>
-          <div className="mt-2 text-sm font-semibold">View Trust Center</div>
+          <div className="mt-2 flex items-center gap-2 text-sm font-semibold">
+            <TrustCenterIcon />
+            <span>View Trust Center</span>
+          </div>
           <div className="mt-2 text-sm text-white/60">See what a public user sees.</div>
         </a>
       </section>
 
       <section className="grid gap-4 lg:grid-cols-3">
-        <div className="rounded-2xl border border-white/10 bg-[#0f1117]">
+        <div className="rounded-2xl border border-white/10 bg-[#0f1117]/85">
           <div className="border-b border-white/10 px-5 py-4">
             <div className="text-sm font-semibold">Failed KSIs</div>
             <div className="text-xs text-white/50">Prioritize remediation</div>
@@ -76,12 +83,12 @@ export default async function ConsoleHome() {
                 </a>
               ))
             ) : (
-              <div className="px-5 py-6 text-sm text-white/50">No FAIL items in demo data.</div>
+              <div className="px-5 py-6 text-sm text-white/50">Demo Data</div>
             )}
           </div>
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-[#0f1117]">
+        <div className="rounded-2xl border border-white/10 bg-[#0f1117]/85">
           <div className="border-b border-white/10 px-5 py-4">
             <div className="text-sm font-semibold">Pending KSIs</div>
             <div className="text-xs text-white/50">Next up for evidence mapping</div>
@@ -99,7 +106,7 @@ export default async function ConsoleHome() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-[#0f1117]">
+        <div className="rounded-2xl border border-white/10 bg-[#0f1117]/85">
           <div className="border-b border-white/10 px-5 py-4">
             <div className="text-sm font-semibold">Recently Verified</div>
             <div className="text-xs text-white/50">Latest status updates</div>

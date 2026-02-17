@@ -78,7 +78,7 @@ export default function KsiValidation({ ksiId }: { ksiId: string }) {
   const canSave = threePao.trim().length > 0 && assessorName.trim().length > 0;
 
   return (
-    <div className="rounded-2xl border border-white/10 bg-[#0f1117] p-6">
+    <div className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-6">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <div className="text-sm font-semibold">Validation</div>
@@ -129,7 +129,7 @@ export default function KsiValidation({ ksiId }: { ksiId: string }) {
             if (e.target === e.currentTarget) setOpen(false);
           }}
         >
-          <div className="w-full max-w-lg rounded-2xl border border-white/10 bg-[#0b0e14] shadow-[0_20px_80px_rgba(0,0,0,0.6)]">
+          <div className="w-full max-w-lg rounded-2xl border border-white/10 bg-[#0b0e14]/80 shadow-[0_20px_80px_rgba(0,0,0,0.6)]">
             <div className="border-b border-white/10 px-5 py-4">
               <div className="text-sm font-semibold">Validate KSI</div>
               <div className="mt-1 text-xs text-white/50">{ksiId}</div>

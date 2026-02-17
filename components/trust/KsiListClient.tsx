@@ -67,7 +67,7 @@ export default function KsiListClient({
 
 
   return (
-    <section className="overflow-hidden rounded-2xl border border-white/10 bg-[#0f1117]">
+    <section className="overflow-hidden rounded-2xl border border-white/10 bg-[#0f1117]/85">
       <div className="border-b border-white/10 px-6 py-4">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>

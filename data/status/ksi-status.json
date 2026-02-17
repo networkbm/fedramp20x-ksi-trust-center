@@ -3,7 +3,7 @@
     "framework": "FedRAMP 20x Key Security Indicators",
     "environment": "demo",
     "last_updated": "2026-01-16",
-    "notes": "Status values are for demonstration purposes only and do not represent an official FedRAMP authorization."
+    "notes": "Demo Data"
   },
 
   "statuses": {

@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { PoliciesIcon } from "@/components/ui/SectionIcons";
 
 type PolicyItem = {
   id: string;
@@ -27,8 +28,11 @@ export default async function PoliciesPage() {
 
   return (
     <div className="space-y-6">
-      <section className="rounded-2xl border border-white/10 bg-[#0f1117] p-6">
-        <div className="text-sm text-white/60">Policies</div>
+      <section className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-6">
+        <div className="flex items-center gap-2 text-sm text-white/60">
+          <PoliciesIcon className="h-3.5 w-3.5" />
+          <span>Policies</span>
+        </div>
         <h1 className="mt-2 text-2xl font-semibold tracking-tight">Security & Compliance Policies</h1>
         <p className="mt-3 max-w-3xl text-sm leading-6 text-white/70">
           This page lists example policy artifacts for a portfolio Trust Center. Some policies may be published publicly,
@@ -37,7 +41,7 @@ export default async function PoliciesPage() {
       </section>
 
       <section className="grid gap-6 lg:grid-cols-2">
-        <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#0f1117]">
+        <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#0f1117]/85">
           <div className="border-b border-white/10 px-6 py-4">
             <div className="text-sm font-semibold">Public Policies</div>
             <div className="text-xs text-white/50">Available to all visitors</div>
@@ -64,7 +68,7 @@ export default async function PoliciesPage() {
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#0f1117]">
+        <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#0f1117]/85">
           <div className="border-b border-white/10 px-6 py-4">
             <div className="text-sm font-semibold">Gated Policies</div>
             <div className="text-xs text-white/50">Available upon request / NDA</div>

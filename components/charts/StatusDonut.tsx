@@ -53,7 +53,7 @@ export default function StatusDonut({ counts }: { counts: StatusCounts }) {
   };
 
   return (
-    <div className="rounded-2xl border border-white/10 bg-[#0f1117] p-5">
+    <div className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-5">
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="text-sm font-semibold">KSI Status Breakdown</div>
@@ -78,7 +78,7 @@ export default function StatusDonut({ counts }: { counts: StatusCounts }) {
                 const percent = pct(value, counts.total);
 
                 return (
-                  <div className="rounded-xl border border-white/10 bg-[#0b0e14] px-3 py-2 text-xs text-white/80 shadow-[0_10px_30px_rgba(0,0,0,0.45)]">
+                  <div className="rounded-xl border border-white/10 bg-[#0b0e14]/80 px-3 py-2 text-xs text-white/80 shadow-[0_10px_30px_rgba(0,0,0,0.45)]">
                     <div className="font-semibold">{name}</div>
                     <div className="mt-1 text-white/70">
                       {value} ({percent}%)

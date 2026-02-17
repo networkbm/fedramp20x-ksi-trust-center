@@ -28,7 +28,7 @@ export default function KsiFilters({
     "border-white/20 bg-white/10 text-white shadow-[0_0_22px_rgba(99,102,241,0.15)]";
 
   const badgeBase =
-    "rounded-full border border-white/10 bg-[#0b0e14] px-2 py-0.5 text-[11px] text-white/60";
+    "rounded-full border border-white/10 bg-[#0b0e14]/80 px-2 py-0.5 text-[11px] text-white/60";
 
   return (
     <div className="flex flex-wrap items-center gap-2">
