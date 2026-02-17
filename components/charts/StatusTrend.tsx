@@ -1,11 +1,11 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import {
   CartesianGrid,
   Legend,
   Line,
   LineChart,
-  ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis
@@ -19,16 +19,34 @@ type Point = {
 };
 
 export default function StatusTrend({ points }: { points: Point[] }) {
+  const frameRef = useRef<HTMLDivElement | null>(null);
+  const [chartWidth, setChartWidth] = useState(0);
+
+  useEffect(() => {
+    const el = frameRef.current;
+    if (!el) return;
+
+    const updateWidth = () => {
+      const next = Math.floor(el.getBoundingClientRect().width);
+      if (next > 0) setChartWidth(next);
+    };
+
+    updateWidth();
+    const observer = new ResizeObserver(updateWidth);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-5">
+    <div className="min-w-0 rounded-2xl border border-white/10 bg-[#0f1117]/85 p-5">
       <div>
         <div className="text-sm font-semibold">KSI Status Trend</div>
         <div className="mt-1 text-xs text-white/50">PASS / FAIL / PENDING over time</div>
       </div>
 
-      <div className="mt-4 h-[260px] w-full">
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={points} margin={{ top: 10, right: 18, left: 0, bottom: 0 }}>
+      <div ref={frameRef} className="mt-4 h-[260px] w-full min-w-0">
+        {chartWidth > 0 ? (
+          <LineChart width={chartWidth} height={260} data={points} margin={{ top: 10, right: 18, left: 0, bottom: 0 }}>
             <CartesianGrid stroke="rgba(255,255,255,0.06)" vertical={false} />
             <XAxis
               dataKey="date"
@@ -95,7 +113,7 @@ export default function StatusTrend({ points }: { points: Point[] }) {
               activeDot={{ r: 5 }}
             />
           </LineChart>
-        </ResponsiveContainer>
+        ) : null}
       </div>
     </div>
   );

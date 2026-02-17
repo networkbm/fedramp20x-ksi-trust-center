@@ -1,10 +1,10 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import {
   Cell,
   Pie,
   PieChart,
-  ResponsiveContainer,
   Tooltip
 } from "recharts";
 
@@ -34,6 +34,24 @@ function pct(value: number, total: number) {
 }
 
 export default function StatusDonut({ counts }: { counts: StatusCounts }) {
+  const frameRef = useRef<HTMLDivElement | null>(null);
+  const [chartWidth, setChartWidth] = useState(0);
+
+  useEffect(() => {
+    const el = frameRef.current;
+    if (!el) return;
+
+    const updateWidth = () => {
+      const next = Math.floor(el.getBoundingClientRect().width);
+      if (next > 0) setChartWidth(next);
+    };
+
+    updateWidth();
+    const observer = new ResizeObserver(updateWidth);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   const data: DonutDatum[] = [
     { name: "Passed", value: counts.PASS, key: "PASS" },
     { name: "Failed", value: counts.FAIL, key: "FAIL" },
@@ -53,7 +71,7 @@ export default function StatusDonut({ counts }: { counts: StatusCounts }) {
   };
 
   return (
-    <div className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-5">
+    <div className="min-w-0 rounded-2xl border border-white/10 bg-[#0f1117]/85 p-5">
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="text-sm font-semibold">KSI Status Breakdown</div>
@@ -66,9 +84,9 @@ export default function StatusDonut({ counts }: { counts: StatusCounts }) {
         </div>
       </div>
 
-      <div className="mt-4 h-[240px] w-full">
-        <ResponsiveContainer width="100%" height="100%">
-          <PieChart>
+      <div ref={frameRef} className="mt-4 h-[240px] w-full min-w-0">
+        {chartWidth > 0 ? (
+          <PieChart width={chartWidth} height={240}>
             <Tooltip
               content={({ active, payload }) => {
                 if (!active || !payload?.length) return null;
@@ -107,7 +125,7 @@ export default function StatusDonut({ counts }: { counts: StatusCounts }) {
               ))}
             </Pie>
           </PieChart>
-        </ResponsiveContainer>
+        ) : null}
       </div>
 
       <div className="mt-4 grid grid-cols-3 gap-3">
