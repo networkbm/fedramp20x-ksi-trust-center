@@ -28,16 +28,10 @@ npm install
 npm run dev
 ```
 ## Screenshots
-![Trust Center Overview](screenshots/trust-overview.png)
+![Trust Center Overview](screenshots/Dashboards.png)
 
-![Compliance Dashboard](screenshots/compliance-dashboard.png)
+![Compliance Dashboard](screenshots/Dashboard.png)
 
-![KSI Detail Page](screenshots/ksi-detail.png)
+![KSI Detail Page](screenshots/KSI.png)
 
-![Console Dashboard](screenshots/console-dashboard.png)
-
-![Console Dashboard](screenshots/KSI-validation-1.png)
-
-![Console Dashboard](screenshots/KSI-validation-2.png)
-
-![Console Dashboard](screenshots/Trust-Center-new-UI.png)
+![Console Dashboard](screenshots/Validation.png)
