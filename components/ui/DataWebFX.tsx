@@ -104,7 +104,7 @@ export default function DataWebFX() {
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
           ctx.lineWidth = 1;
-          ctx.strokeStyle = `rgba(34,211,238,${0.10 * t})`;
+          ctx.strokeStyle = `rgba(148,163,184,${0.09 * t})`;
           ctx.stroke();
         }
       }
@@ -113,7 +113,7 @@ export default function DataWebFX() {
         const n = nodes[i];
         ctx.beginPath();
         ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(34,211,238,0.22)";
+        ctx.fillStyle = "rgba(148,163,184,0.18)";
         ctx.fill();
       }
 
@@ -140,7 +140,7 @@ export default function DataWebFX() {
   return (
     <canvas
       ref={ref}
-      className="absolute inset-0 h-full w-full opacity-[0.55]"
+      className="absolute inset-0 h-full w-full opacity-[0.32]"
       aria-hidden="true"
     />
   );

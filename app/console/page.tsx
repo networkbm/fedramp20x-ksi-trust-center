@@ -33,7 +33,7 @@ export default async function ConsoleHome() {
       <section className="grid gap-4 md:grid-cols-3">
         <a
           href="/trust/compliance"
-          className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.04]"
+          className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.04]"
         >
           <div className="text-xs text-white/60">Quick Action</div>
           <div className="mt-2 flex items-center gap-2 text-sm font-semibold">
@@ -45,7 +45,7 @@ export default async function ConsoleHome() {
 
         <a
           href="/trust/compliance"
-          className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.04]"
+          className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.04]"
         >
           <div className="text-xs text-white/60">Quick Action</div>
           <div className="mt-2 text-sm font-semibold">Demo Data</div>
@@ -54,7 +54,7 @@ export default async function ConsoleHome() {
 
         <a
           href="/trust"
-          className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.04]"
+          className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.04]"
         >
           <div className="text-xs text-white/60">Quick Action</div>
           <div className="mt-2 flex items-center gap-2 text-sm font-semibold">
@@ -66,7 +66,7 @@ export default async function ConsoleHome() {
       </section>
 
       <section className="grid gap-4 lg:grid-cols-3">
-        <div className="rounded-2xl border border-white/10 bg-[#0f1117]/85">
+        <div className="rounded-2xl border border-white/10 bg-[#0b1016]/78">
           <div className="border-b border-white/10 px-5 py-4">
             <div className="text-sm font-semibold">Failed KSIs</div>
             <div className="text-xs text-white/50">Prioritize remediation</div>
@@ -88,7 +88,7 @@ export default async function ConsoleHome() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-[#0f1117]/85">
+        <div className="rounded-2xl border border-white/10 bg-[#0b1016]/78">
           <div className="border-b border-white/10 px-5 py-4">
             <div className="text-sm font-semibold">Pending KSIs</div>
             <div className="text-xs text-white/50">Next up for evidence mapping</div>
@@ -106,7 +106,7 @@ export default async function ConsoleHome() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-[#0f1117]/85">
+        <div className="rounded-2xl border border-white/10 bg-[#0b1016]/78">
           <div className="border-b border-white/10 px-5 py-4">
             <div className="text-sm font-semibold">Recently Verified</div>
             <div className="text-xs text-white/50">Latest status updates</div>

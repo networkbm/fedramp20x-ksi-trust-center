@@ -1,6 +1,6 @@
 # FedRAMP KSI Trust Center (Demo)
 
-It includes PASS / FAIL / PENDING status tracking, evidence linking, and dashboard charts, built as a portfolio GRC platform demo.
+It includes PASS / FAIL / PENDING status tracking, evidence linking, dashboard charts, and an Ollama-backed AI assistant, built as a portfolio GRC platform demo.
 
 ## Features
 
@@ -16,7 +16,10 @@ It includes PASS / FAIL / PENDING status tracking, evidence linking, and dashboa
 - Charts:
   - Donut breakdown (PASS/FAIL/PENDING)
   - Trend line over time (demo history)
-- Evidence linking (demo files served from /public)
+- AI assistant with Ollama:
+  - Matching KSI results based on the prompt
+  - Prompt driven graphs
+  - Validation aware responses using browser stored assessor records
 - 3PAO KSI validation
 
 ## Getting Started
@@ -27,6 +30,7 @@ Install dependencies:
 npm install
 npm run dev
 ```
+
 ## Screenshots
 ![Trust Center Overview](screenshots/Dashboards.png)
 

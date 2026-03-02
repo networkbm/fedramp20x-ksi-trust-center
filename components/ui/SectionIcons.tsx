@@ -24,10 +24,10 @@ export function ComplianceIcon({ className, ...props }: IconProps) {
 export function OverviewIcon({ className, ...props }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" className={`${base} ${className ?? ""}`} fill="none" stroke="currentColor" strokeWidth="1.8" {...props}>
-      <rect x="3" y="3" width="8" height="8" rx="1.5" />
-      <rect x="13" y="3" width="8" height="5" rx="1.5" />
-      <rect x="13" y="10" width="8" height="11" rx="1.5" />
-      <rect x="3" y="13" width="8" height="8" rx="1.5" />
+      <rect x="3" y="3" width="8" height="8" rx="1.5" strokeOpacity="0.5" />
+      <rect x="13" y="3" width="8" height="5" rx="1.5" strokeOpacity="0.5" />
+      <rect x="13" y="10" width="8" height="11" rx="1.5" strokeOpacity="0.5" />
+      <rect x="3" y="13" width="8" height="8" rx="1.5" strokeOpacity="0.5" />
     </svg>
   );
 }
@@ -53,7 +53,16 @@ export function ConsoleIcon({ className, ...props }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" className={`${base} ${className ?? ""}`} fill="none" stroke="currentColor" strokeWidth="1.8" {...props}>
       <path d="m5 7 4 4-4 4m6 0h8" />
-      <rect x="3" y="4" width="18" height="16" rx="2" />
+      <rect x="3" y="4" width="18" height="16" rx="2" strokeOpacity="0.5" />
+    </svg>
+  );
+}
+
+export function AiIcon({ className, ...props }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={`${base} ${className ?? ""}`} fill="none" stroke="currentColor" strokeWidth="1.8" {...props}>
+      <path d="M12 3v4m0 10v4M5.6 5.6l2.8 2.8m7.2 7.2 2.8 2.8M3 12h4m10 0h4M5.6 18.4l2.8-2.8m7.2-7.2 2.8-2.8" />
+      <circle cx="12" cy="12" r="3.5" />
     </svg>
   );
 }

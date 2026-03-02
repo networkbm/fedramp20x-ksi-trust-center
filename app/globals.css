@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #070a12;
-  --foreground: #e6e8ee;
-  --muted: rgba(230, 232, 238, 0.65);
-  --surface: rgba(255, 255, 255, 0.04);
-  --surface-2: rgba(255, 255, 255, 0.06);
-  --border: rgba(255, 255, 255, 0.10);
+  --background: #05070b;
+  --foreground: #edf2f7;
+  --muted: rgba(237, 242, 247, 0.62);
+  --surface: rgba(14, 19, 28, 0.78);
+  --surface-2: rgba(255, 255, 255, 0.05);
+  --border: rgba(148, 163, 184, 0.16);
+  --accent: #7dd3fc;
+  --accent-soft: rgba(125, 211, 252, 0.14);
 }
 
 @theme inline {
@@ -17,13 +19,19 @@
 }
 
 html {
-  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  background: var(--background);
 }
 
 body {
-  background: transparent;
+  min-height: 100vh;
+  background:
+    radial-gradient(1200px 700px at 14% -8%, rgba(96, 165, 250, 0.10), transparent 58%),
+    radial-gradient(900px 560px at 88% 0%, rgba(56, 189, 248, 0.08), transparent 52%),
+    linear-gradient(180deg, #070a10 0%, #05070b 42%, #04060a 100%);
   color: var(--foreground);
   font-family: inherit;
+  letter-spacing: -0.012em;
 }
 
 .section-container {
@@ -34,8 +42,13 @@ body {
 .card {
   border-radius: 0.75rem;
   border: 1px solid var(--border);
-  background: #0f1117;
+  background: var(--surface);
   padding: 1.5rem;
+}
+
+::selection {
+  background: rgba(125, 211, 252, 0.24);
+  color: #f8fbff;
 }
 
 @keyframes bgDots {

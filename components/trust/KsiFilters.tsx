@@ -25,10 +25,10 @@ export default function KsiFilters({
     "border-white/10 bg-white/5 text-white/70 hover:bg-white/10 hover:text-white";
 
   const pillActive =
-    "border-white/20 bg-white/10 text-white shadow-[0_0_22px_rgba(99,102,241,0.15)]";
+    "border-slate-300/20 bg-slate-200/[0.08] text-white shadow-[0_0_22px_rgba(125,211,252,0.08)]";
 
   const badgeBase =
-    "rounded-full border border-white/10 bg-[#0b0e14]/80 px-2 py-0.5 text-[11px] text-white/60";
+    "rounded-full border border-white/10 bg-[#0a0f15]/72 px-2 py-0.5 text-[11px] text-white/60";
 
   return (
     <div className="flex flex-wrap items-center gap-2">

@@ -1,9 +1,9 @@
-import { ComplianceIcon, ConsoleIcon, TrustCenterIcon } from "@/components/ui/SectionIcons";
+import { AiIcon, ComplianceIcon, ConsoleIcon, TrustCenterIcon } from "@/components/ui/SectionIcons";
 
 export default function TrustHome() {
   return (
     <div className="space-y-6">
-      <section className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-6">
+      <section className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-6">
         <div className="flex items-center gap-2 text-sm text-white/60">
           <TrustCenterIcon className="h-3.5 w-3.5" />
           <span>Trust Center</span>
@@ -12,7 +12,10 @@ export default function TrustHome() {
           <ComplianceIcon />
           <span>Security & Compliance</span>
         </h1>
-        <p className="mt-3 max-w-2xl text-sm leading-6 text-white/70">Demo Data</p>
+        <p className="mt-3 max-w-2xl text-sm leading-6 text-white/70">
+          Demo Data. Explore KSIs, review status trends, and use Ollama-powered AI to answer questions, find matching
+          indicators, and generate graphs from natural-language prompts.
+        </p>
 
         <div className="mt-5 flex flex-wrap gap-3">
           <a
@@ -32,18 +35,25 @@ export default function TrustHome() {
         </div>
       </section>
 
-      <section className="grid gap-4 md:grid-cols-3">
-        <div className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-5">
+      <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-5">
           <div className="text-xs text-white/60">Design</div>
           <div className="mt-2 text-sm text-white/80">Modern night-mode UI with neon interaction states.</div>
         </div>
-        <div className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-5">
+        <div className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-5">
           <div className="text-xs text-white/60">Content</div>
           <div className="mt-2 text-sm text-white/80">All KSIs loaded from the official FedRAMP JSON file.</div>
         </div>
-        <div className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-5">
+        <div className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-5">
           <div className="text-xs text-white/60">Status</div>
           <div className="mt-2 text-sm text-white/80">PASS/FAIL/PENDING statuses driven by repo JSON.</div>
+        </div>
+        <div className="rounded-2xl border border-cyan-400/15 bg-[#0b1016]/78 p-5">
+          <div className="flex items-center gap-2 text-xs text-cyan-200/80">
+            <AiIcon className="h-3.5 w-3.5" />
+            <span>AI</span>
+          </div>
+          <div className="mt-2 text-sm text-white/80">Ask Ollama for KSI answers, matches, and graphs.</div>
         </div>
       </section>
     </div>

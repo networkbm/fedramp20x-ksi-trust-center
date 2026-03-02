@@ -21,6 +21,11 @@ type DonutDatum = {
   key: "PASS" | "FAIL" | "PENDING";
 };
 
+type TooltipEntry = {
+  name?: string;
+  value?: number | string;
+};
+
 function clampPct(n: number) {
   if (!Number.isFinite(n)) return 0;
   if (n < 0) return 0;
@@ -71,7 +76,7 @@ export default function StatusDonut({ counts }: { counts: StatusCounts }) {
   };
 
   return (
-    <div className="min-w-0 rounded-2xl border border-white/10 bg-[#0f1117]/85 p-5">
+    <div className="min-w-0 rounded-2xl border border-white/10 bg-[#0b1016]/78 p-5">
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="text-sm font-semibold">KSI Status Breakdown</div>
@@ -90,13 +95,13 @@ export default function StatusDonut({ counts }: { counts: StatusCounts }) {
             <Tooltip
               content={({ active, payload }) => {
                 if (!active || !payload?.length) return null;
-                const p = payload[0] as any;
+                const p = payload[0] as TooltipEntry;
                 const name = String(p?.name ?? "");
                 const value = Number(p?.value ?? 0);
                 const percent = pct(value, counts.total);
 
                 return (
-                  <div className="rounded-xl border border-white/10 bg-[#0b0e14]/80 px-3 py-2 text-xs text-white/80 shadow-[0_10px_30px_rgba(0,0,0,0.45)]">
+                  <div className="rounded-xl border border-white/10 bg-[#0a0f15]/72 px-3 py-2 text-xs text-white/80 shadow-[0_10px_30px_rgba(0,0,0,0.45)]">
                     <div className="font-semibold">{name}</div>
                     <div className="mt-1 text-white/70">
                       {value} ({percent}%)

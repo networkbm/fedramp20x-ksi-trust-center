@@ -6,14 +6,8 @@ import StatusDonut from "@/components/charts/StatusDonut";
 import StatusTrend from "@/components/charts/StatusTrend";
 import { loadHistory } from "@/lib/data/loadHistory";
 import KsiListClient from "@/components/trust/KsiListClient";
+import AiAssistantPanel from "@/components/trust/AiAssistantPanel";
 import { ComplianceIcon, OverviewIcon } from "@/components/ui/SectionIcons";
-
-
-function ballClass(status: "PASS" | "FAIL" | "PENDING") {
-  if (status === "PASS") return "bg-emerald-400 shadow-[0_0_18px_rgba(52,211,153,0.45)]";
-  if (status === "FAIL") return "bg-rose-500 shadow-[0_0_18px_rgba(244,63,94,0.45)]";
-  return "bg-amber-400 shadow-[0_0_18px_rgba(251,191,36,0.45)]";
-}
 
 export default async function TrustCompliancePage() {
   const ksis = await loadKsis();
@@ -25,7 +19,7 @@ export default async function TrustCompliancePage() {
 
   return (
     <div className="space-y-6">
-      <section className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-6">
+      <section className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-6">
         <div className="flex items-center gap-2 text-sm text-white/60">
           <ComplianceIcon className="h-3.5 w-3.5" />
           <span>Compliance</span>
@@ -39,7 +33,7 @@ export default async function TrustCompliancePage() {
   </div>
 
   <div className="lg:col-span-2">
-    <div className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-5">
+    <div className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-5">
       <div className="flex items-center gap-2 text-sm font-semibold">
         <OverviewIcon className="h-4 w-4" />
         <span>Overview</span>
@@ -66,7 +60,8 @@ export default async function TrustCompliancePage() {
       </div>
 
       <div className="mt-4 rounded-2xl border border-white/10 bg-white/5 p-4 text-xs text-white/60">
-        Hover the chart to see counts and percentages.
+        Hover the chart to see counts and percentages. Use the AI panel below to query KSIs in natural language and
+        generate graphs from prompts.
       </div>
     </div>
   </div>
@@ -75,9 +70,8 @@ export default async function TrustCompliancePage() {
       <div className="grid gap-4 lg:grid-cols-1">
   <StatusTrend points={history.points} />
 </div>
-
-
-      <KsiListClient items={view.items} meta={view.meta as any} />
+      <AiAssistantPanel totalKsis={counts.total} />
+      <KsiListClient items={view.items} meta={view.meta} />
     </div>
   );
 }

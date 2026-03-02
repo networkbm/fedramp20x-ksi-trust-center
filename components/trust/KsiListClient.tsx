@@ -67,7 +67,7 @@ export default function KsiListClient({
 
 
   return (
-    <section className="overflow-hidden rounded-2xl border border-white/10 bg-[#0f1117]/85">
+    <section className="overflow-hidden rounded-2xl border border-white/10 bg-[#0b1016]/78">
       <div className="border-b border-white/10 px-6 py-4">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
@@ -117,8 +117,8 @@ export default function KsiListClient({
               <div className="shrink-0 text-xs text-white/40 group-hover:text-white/60">View</div>
             </div>
               <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-              <div className="absolute inset-0 rounded-none shadow-[inset_0_0_0_1px_rgba(99,102,241,0.18)]" />
-              <div className="absolute -inset-px blur-md shadow-[0_0_22px_rgba(34,211,238,0.12)]" />
+              <div className="absolute inset-0 rounded-none shadow-[inset_0_0_0_1px_rgba(96,165,250,0.10)]" />
+              <div className="absolute -inset-px blur-md shadow-[0_0_22px_rgba(125,211,252,0.10)]" />
             </div>
           </a>
         ))}

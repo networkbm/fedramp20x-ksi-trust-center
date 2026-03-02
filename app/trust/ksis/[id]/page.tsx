@@ -24,7 +24,7 @@ export default async function KsiDetailPage({ params }: { params: Promise<{ id: 
   if (!ksi) {
     return (
       <div className="space-y-6">
-        <section className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-6">
+        <section className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-6">
           <div className="text-sm text-white/60">Not found</div>
           <h1 className="mt-2 text-2xl font-semibold tracking-tight">KSI not found</h1>
           <div className="mt-3 text-sm text-white/70">
@@ -40,7 +40,7 @@ export default async function KsiDetailPage({ params }: { params: Promise<{ id: 
           </div>
         </section>
 
-        <section className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-6">
+        <section className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-6">
           <div className="text-sm font-semibold">Debug (first 10 KSI IDs)</div>
           <div className="mt-3 grid gap-2 text-sm text-white/70">
             {view.items.slice(0, 10).map((k) => (
@@ -56,7 +56,7 @@ export default async function KsiDetailPage({ params }: { params: Promise<{ id: 
 
   return (
     <div className="space-y-6">
-      <section className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-6">
+      <section className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-6">
         <div className="flex items-start justify-between gap-4">
           <div>
             <div className="text-sm text-white/60">Key Security Indicator</div>
@@ -77,13 +77,13 @@ export default async function KsiDetailPage({ params }: { params: Promise<{ id: 
         </div>
       </section>
 
-      <section className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-6">
+      <section className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-6">
         <div className="text-sm font-semibold">Description</div>
         <p className="mt-3 max-w-3xl text-sm leading-6 text-white/70">{ksi.description}</p>
       </section>
 
       <section className="grid gap-6 md:grid-cols-2">
-        <div className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-6">
+        <div className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-6">
           <div className="text-sm font-semibold">Status Summary</div>
           {ksi.summary ? (
             <p className="mt-3 text-sm leading-6 text-white/70">{ksi.summary}</p>
@@ -96,7 +96,7 @@ export default async function KsiDetailPage({ params }: { params: Promise<{ id: 
           ) : null}
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-[#0f1117]/85 p-6">
+        <div className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-6">
           <div className="text-sm font-semibold">Evidence</div>
 
           {ksi.evidence && ksi.evidence.length > 0 ? (
