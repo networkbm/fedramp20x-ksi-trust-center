@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   ComplianceIcon,
   ConsoleIcon,
@@ -34,45 +35,45 @@ export default function TrustLayout({ children }: { children: React.ReactNode })
 
                 <div className="max-h-[55vh] overflow-auto pr-1">
                   <nav className="space-y-1 text-sm">
-                    <a
+                    <Link
                       href="/trust"
                       className="flex items-center gap-2 rounded-xl px-3 py-2 text-white/80 hover:bg-white/[0.05] hover:text-white"
                     >
                       <OverviewIcon />
                       <span>Overview</span>
-                    </a>
+                    </Link>
 
-                    <a
+                    <Link
                       href="/trust/compliance"
                       className="flex items-center gap-2 rounded-xl px-3 py-2 text-white/80 hover:bg-white/[0.05] hover:text-white"
                     >
                       <ComplianceIcon />
                       <span>Compliance (KSIs)</span>
-                    </a>
+                    </Link>
 
-                    <a
+                    <Link
                       href="/trust/policies"
                       className="flex items-center gap-2 rounded-xl px-3 py-2 text-white/80 hover:bg-white/[0.05] hover:text-white"
                     >
                       <PoliciesIcon />
                       <span>Policies</span>
-                    </a>
+                    </Link>
 
-                    <a
+                    <Link
                       href="/trust/vulnerability-disclosure"
                       className="flex items-center gap-2 rounded-xl px-3 py-2 text-white/80 hover:bg-white/[0.05] hover:text-white"
                     >
                       <VulnerabilityIcon />
                       <span>Vulnerability Disclosure</span>
-                    </a>
+                    </Link>
 
-                    <a
+                    <Link
                       href="/console"
                       className="flex items-center gap-2 rounded-xl px-3 py-2 text-white/80 hover:bg-white/[0.05] hover:text-white"
                     >
                       <ConsoleIcon />
                       <span>Console</span>
-                    </a>
+                    </Link>
                   </nav>
                 </div>
 

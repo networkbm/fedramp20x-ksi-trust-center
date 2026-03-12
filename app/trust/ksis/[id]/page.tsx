@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { loadKsis } from "@/lib/data/loadKsis";
 import { loadStatuses } from "@/lib/data/loadStatuses";
 import { mergeKsiView } from "@/lib/data/mergeKsiView";
@@ -31,12 +32,12 @@ export default async function KsiDetailPage({ params }: { params: Promise<{ id: 
             Requested ID: <span className="font-semibold text-white/90">{decodedId}</span>
           </div>
           <div className="mt-4">
-            <a
+            <Link
               href="/trust/compliance"
               className="rounded-xl border border-white/15 bg-white/[0.03] px-4 py-2 text-sm text-white/80 hover:bg-white/[0.05]"
             >
               Back to KSIs
-            </a>
+            </Link>
           </div>
         </section>
 

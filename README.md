@@ -32,10 +32,11 @@ npm run dev
 ```
 
 ## Screenshots
-![Trust Center Overview](screenshots/Dashboards.png)
 
-![Compliance Dashboard](screenshots/Dashboard.png)
+![Screenshot 1](screenshots/CleanShot 2026-03-12 at 14.56.42@2x.png)
 
-![KSI Detail Page](screenshots/KSI.png)
+![Screenshot 2](screenshots/CleanShot 2026-03-12 at 14.57.16@2x.png)
 
-![Console Dashboard](screenshots/Validation.png)
+![Screenshot 3](screenshots/CleanShot 2026-03-12 at 14.57.35@2x.png)
+
+![Screenshot 4](screenshots/CleanShot 2026-03-12 at 14.58.32@2x.png)

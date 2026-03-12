@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import {
   Bar,
@@ -216,7 +217,7 @@ export default function AiAssistantPanel({ totalKsis }: Props) {
               <div className="text-sm font-semibold text-white/90">Relevant KSIs</div>
               <div className="mt-2.5 grid gap-2.5 md:grid-cols-2">
                 {result.matchedKsis.map((ksi) => (
-                  <a
+                  <Link
                     key={ksi.id}
                     href={`/trust/ksis/${encodeURIComponent(ksi.id)}`}
                     className="rounded-xl border border-white/15 bg-white/[0.03] p-3 transition hover:bg-white/[0.06]"
@@ -234,7 +235,7 @@ export default function AiAssistantPanel({ totalKsis }: Props) {
                       </div>
                     ) : null}
                     {ksi.summary ? <div className="mt-3 text-xs leading-5 text-white/55">{ksi.summary}</div> : null}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

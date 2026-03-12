@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
         <BackgroundFX />
-        {children}
+        <div className="relative z-10">{children}</div>
       </body>
     </html>
   );

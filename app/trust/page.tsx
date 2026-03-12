@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AiIcon, ComplianceIcon, ConsoleIcon, TrustCenterIcon } from "@/components/ui/SectionIcons";
 import LiveTelemetryCard from "@/components/trust/LiveTelemetryCard";
 import { loadKsis } from "@/lib/data/loadKsis";
@@ -27,30 +28,26 @@ export default async function TrustHome() {
         </p>
 
         <div className="mt-5 flex flex-wrap gap-3">
-          <a
+          <Link
             href="/trust/compliance"
             className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/[0.03] px-4 py-2 text-sm text-white/80 hover:bg-white/[0.05]"
           >
             <ComplianceIcon />
             View KSIs
-          </a>
-          <a
+          </Link>
+          <Link
             href="/console"
             className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/[0.03] px-4 py-2 text-sm text-white/80 hover:bg-white/[0.05]"
           >
             <ConsoleIcon />
             Open Console
-          </a>
+          </Link>
         </div>
       </section>
 
       <LiveTelemetryCard compact counts={counts} lastUpdated={String(view.meta.last_updated ?? "")} />
 
-      <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-5">
-          <div className="text-xs text-white/60">Design</div>
-          <div className="mt-2 text-sm text-white/80">Dark operational surfaces with restrained motion and clearer signal hierarchy.</div>
-        </div>
+      <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-5">
           <div className="text-xs text-white/60">Content</div>
           <div className="mt-2 text-sm text-white/80">FedRAMP 20x KSIs are loaded from source JSON and mapped to demo evidence.</div>

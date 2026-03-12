@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import KsiFilters from "@/components/trust/KsiFilters";
 import KsiSearch from "@/components/trust/KsiSearch";
@@ -90,7 +91,7 @@ export default function KsiListClient({
 
       <div className="divide-y divide-white/10">
         {filtered.map((k) => (
-          <a
+          <Link
             key={k.id}
             href={`/trust/ksis/${encodeURIComponent(k.id)}`}
             className="group relative block px-6 py-4 transition will-change-transform hover:-translate-y-[1px] hover:bg-white/[0.05]"
@@ -120,7 +121,7 @@ export default function KsiListClient({
               <div className="absolute inset-0 rounded-none shadow-[inset_0_0_0_1px_rgba(96,165,250,0.10)]" />
               <div className="absolute -inset-px blur-md shadow-[0_0_22px_rgba(125,211,252,0.10)]" />
             </div>
-          </a>
+          </Link>
         ))}
 
         {filtered.length === 0 ? (

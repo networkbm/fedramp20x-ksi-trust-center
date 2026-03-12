@@ -1,3 +1,4 @@
+import Link from "next/link";
 import StatusDonut from "@/components/charts/StatusDonut";
 import StatusTrend from "@/components/charts/StatusTrend";
 import { loadKsis } from "@/lib/data/loadKsis";
@@ -44,7 +45,7 @@ export default async function ConsoleHome() {
       </section>
 
       <section className="grid gap-4 md:grid-cols-3">
-        <a
+        <Link
           href="/trust/compliance"
           className="rounded-2xl border border-white/15 bg-white/[0.03] p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.05]"
         >
@@ -54,18 +55,18 @@ export default async function ConsoleHome() {
             <span>Review KSIs</span>
           </div>
           <div className="mt-2 text-sm text-white/60">Open the KSI list with filters and search.</div>
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="/trust/compliance"
           className="rounded-2xl border border-white/15 bg-white/[0.03] p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.05]"
         >
           <div className="text-xs text-white/60">Quick Action</div>
           <div className="mt-2 text-sm font-semibold">Export Queue</div>
           <div className="mt-2 text-sm text-white/60">Review the latest report package and evidence export handoff.</div>
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="/trust"
           className="rounded-2xl border border-white/15 bg-white/[0.03] p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.05]"
         >
@@ -75,7 +76,7 @@ export default async function ConsoleHome() {
             <span>View Trust Center</span>
           </div>
           <div className="mt-2 text-sm text-white/60">See what a public user sees.</div>
-        </a>
+        </Link>
       </section>
 
       <section className="grid gap-4 lg:grid-cols-3">
@@ -87,13 +88,13 @@ export default async function ConsoleHome() {
           <div className="divide-y divide-white/10">
             {topRisk.length > 0 ? (
               topRisk.map((k) => (
-                <a
+                <Link
                   key={k.id}
                   href={`/trust/ksis/${encodeURIComponent(k.id)}`}
                   className="block px-5 py-3 text-sm text-white/70 transition hover:bg-white/[0.05] hover:text-white"
                 >
                   {k.id} — {k.name}
-                </a>
+                </Link>
               ))
             ) : (
               <div className="px-5 py-6 text-sm text-white/50">Demo Data</div>
@@ -108,13 +109,13 @@ export default async function ConsoleHome() {
           </div>
           <div className="divide-y divide-white/10">
             {pending.map((k) => (
-              <a
+              <Link
                 key={k.id}
                 href={`/trust/ksis/${encodeURIComponent(k.id)}`}
                 className="block px-5 py-3 text-sm text-white/70 transition hover:bg-white/[0.05] hover:text-white"
               >
                 {k.id} — {k.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -127,7 +128,7 @@ export default async function ConsoleHome() {
           <div className="divide-y divide-white/10">
             {recent.length > 0 ? (
               recent.map((k) => (
-                <a
+                <Link
                   key={k.id}
                   href={`/trust/ksis/${encodeURIComponent(k.id)}`}
                   className="block px-5 py-3 text-sm text-white/70 transition hover:bg-white/[0.05] hover:text-white"
@@ -138,7 +139,7 @@ export default async function ConsoleHome() {
                     </span>
                     <span className="shrink-0 text-xs text-white/40">{String(k.last_verified)}</span>
                   </div>
-                </a>
+                </Link>
               ))
             ) : (
               <div className="px-5 py-6 text-sm text-white/50">No verified items found.</div>

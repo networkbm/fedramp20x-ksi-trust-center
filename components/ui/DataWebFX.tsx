@@ -4,7 +4,25 @@ import { useEffect, useRef } from "react";
 
 type Node = { x: number; y: number; vx: number; vy: number; r: number };
 
-export default function DataWebFX() {
+type Props = {
+  lineColor?: string;
+  nodeColor?: string;
+  opacityClass?: string;
+  density?: number;
+  maxLinkDist?: number;
+  velocity?: number;
+  lineAlpha?: number;
+};
+
+export default function DataWebFX({
+  lineColor = "rgba(186,230,253,0.11)",
+  nodeColor = "rgba(186,230,253,0.18)",
+  opacityClass = "opacity-[0.4]",
+  density = 0.00007,
+  maxLinkDist = 164,
+  velocity = 0.24,
+  lineAlpha = 0.11
+}: Props) {
   const ref = useRef<HTMLCanvasElement | null>(null);
   const raf = useRef<number | null>(null);
   const nodesRef = useRef<Node[]>([]);
@@ -21,9 +39,10 @@ export default function DataWebFX() {
       typeof window !== "undefined" &&
       window.matchMedia &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const lineRgb = lineColor.startsWith("rgba(")
+      ? lineColor.slice(5, -1).split(",").slice(0, 3).join(",")
+      : "186,230,253";
 
-    const density = 0.00007;
-    const maxLinkDist = 164;
     const maxLinkDist2 = maxLinkDist * maxLinkDist;
 
     function resize() {
@@ -49,8 +68,8 @@ export default function DataWebFX() {
           next.push({
             x: Math.random() * w,
             y: Math.random() * h,
-            vx: (Math.random() - 0.5) * 0.24,
-            vy: (Math.random() - 0.5) * 0.24,
+            vx: (Math.random() - 0.5) * velocity,
+            vy: (Math.random() - 0.5) * velocity,
             r
           });
         }
@@ -104,7 +123,7 @@ export default function DataWebFX() {
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
           ctx.lineWidth = 1;
-          ctx.strokeStyle = `rgba(186,230,253,${0.11 * t})`;
+          ctx.strokeStyle = `rgba(${lineRgb},${(lineAlpha * t).toFixed(3)})`;
           ctx.stroke();
         }
       }
@@ -113,7 +132,7 @@ export default function DataWebFX() {
         const n = nodes[i];
         ctx.beginPath();
         ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(186,230,253,0.18)";
+        ctx.fillStyle = nodeColor;
         ctx.fill();
       }
 
@@ -135,13 +154,7 @@ export default function DataWebFX() {
       window.removeEventListener("resize", onResize);
       if (raf.current) window.cancelAnimationFrame(raf.current);
     };
-  }, []);
+  }, [lineColor, nodeColor, density, maxLinkDist, velocity, lineAlpha]);
 
-  return (
-    <canvas
-      ref={ref}
-      className="absolute inset-0 h-full w-full opacity-[0.4]"
-      aria-hidden="true"
-    />
-  );
+  return <canvas ref={ref} className={`absolute inset-0 h-full w-full ${opacityClass}`} aria-hidden="true" />;
 }

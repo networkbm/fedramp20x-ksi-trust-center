@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ConsoleIcon, OverviewIcon, TrustCenterIcon } from "@/components/ui/SectionIcons";
 
 export const metadata: Metadata = {
@@ -24,21 +25,21 @@ export default function ConsoleLayout({ children }: { children: React.ReactNode 
 
                 <div className="max-h-[55vh] overflow-auto pr-1">
                   <nav className="space-y-1 text-sm">
-                    <a
+                    <Link
                       href="/console"
                       className="flex items-center gap-2 rounded-xl px-3 py-2 text-white/80 hover:bg-white/[0.05] hover:text-white"
                     >
                       <OverviewIcon />
                       <span>Dashboard</span>
-                    </a>
+                    </Link>
 
-                    <a
+                    <Link
                       href="/trust"
                       className="flex items-center gap-2 rounded-xl px-3 py-2 text-white/80 hover:bg-white/[0.05] hover:text-white"
                     >
                       <TrustCenterIcon />
                       <span>Trust (Public)</span>
-                    </a>
+                    </Link>
                   </nav>
                 </div>
 
