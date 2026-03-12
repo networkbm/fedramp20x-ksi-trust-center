@@ -33,10 +33,10 @@ npm run dev
 
 ## Screenshots
 
-![Screenshot 1](screenshots/CleanShot 2026-03-12 at 14.56.42@2x.png)
+![Screenshot 1](screenshots/screenshot1.png)
 
-![Screenshot 2](screenshots/CleanShot 2026-03-12 at 14.57.16@2x.png)
+![Screenshot 2](screenshots/screenshot2.png)
 
-![Screenshot 3](screenshots/CleanShot 2026-03-12 at 14.57.35@2x.png)
+![Screenshot 3](screenshots/screenshot3.png)
 
-![Screenshot 4](screenshots/CleanShot 2026-03-12 at 14.58.32@2x.png)
+![Screenshot 4](screenshots/screenshot4.png)
