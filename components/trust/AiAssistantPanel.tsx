@@ -56,11 +56,11 @@ function ChartView({ result }: { result: AiAssistantResponse }) {
   if (!chart) return null;
 
   return (
-    <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4">
+    <div className="mt-5 rounded-2xl border border-white/15 bg-white/[0.03] p-4">
       <div className="text-sm font-semibold text-white/90">{chart.title}</div>
       <div className="mt-1 text-xs text-white/50">{chart.description}</div>
 
-      <div ref={frameRef} className="mt-4 h-[280px] w-full rounded-xl border border-white/10 bg-[#0a0f15]/72 p-3">
+      <div ref={frameRef} className="mt-4 h-[280px] w-full rounded-xl border border-white/15 bg-white/[0.03] p-3">
         {chartWidth > 0 && chart.type === "bar" ? (
           <BarChart width={chartWidth} height={240} data={chart.data} margin={{ top: 8, right: 12, left: 0, bottom: 16 }}>
             <CartesianGrid stroke="rgba(255,255,255,0.06)" vertical={false} />
@@ -144,7 +144,7 @@ export default function AiAssistantPanel({ totalKsis }: Props) {
   }
 
   return (
-    <section className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-4 md:p-5">
+    <section className="rounded-2xl border border-white/15 bg-white/[0.03] p-4 md:p-5">
       <div className="flex items-center gap-2 text-sm text-white/60">
         <ComplianceIcon className="h-3.5 w-3.5" />
         <span>AI Assistant</span>
@@ -161,7 +161,7 @@ export default function AiAssistantPanel({ totalKsis }: Props) {
             value={prompt}
             onChange={(event) => setPrompt(event.target.value)}
             placeholder="Example: Show me KSIs related to logging and create a graph of their status breakdown."
-            className="min-h-[88px] w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2.5 text-sm text-white/85 outline-none placeholder:text-white/30 focus:border-white/20 focus:bg-white/10"
+            className="min-h-[88px] w-full rounded-xl border border-white/15 bg-white/[0.03] px-3 py-2.5 text-sm text-white/85 outline-none placeholder:text-white/30 focus:border-white/20 focus:bg-white/[0.06]"
           />
         </label>
 
@@ -171,7 +171,7 @@ export default function AiAssistantPanel({ totalKsis }: Props) {
               key={suggestion}
               type="button"
               onClick={() => setPrompt(suggestion)}
-              className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] text-white/65 transition hover:bg-white/10 hover:text-white"
+              className="rounded-full border border-white/15 bg-white/[0.03] px-2.5 py-1 text-[11px] text-white/65 transition hover:bg-white/[0.05] hover:text-white"
             >
               {suggestion}
             </button>
@@ -194,7 +194,7 @@ export default function AiAssistantPanel({ totalKsis }: Props) {
       ) : null}
 
       {result ? (
-        <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4">
+        <div className="mt-5 rounded-2xl border border-white/15 bg-white/[0.03] p-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
               <div className="text-sm font-semibold text-white/90">AI Answer</div>
@@ -219,7 +219,7 @@ export default function AiAssistantPanel({ totalKsis }: Props) {
                   <a
                     key={ksi.id}
                     href={`/trust/ksis/${encodeURIComponent(ksi.id)}`}
-                    className="rounded-xl border border-white/10 bg-[#0a0f15]/72 p-3 transition hover:bg-white/[0.06]"
+                    className="rounded-xl border border-white/15 bg-white/[0.03] p-3 transition hover:bg-white/[0.06]"
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div>

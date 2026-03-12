@@ -67,8 +67,8 @@ export default function KsiListClient({
 
 
   return (
-    <section className="overflow-hidden rounded-2xl border border-white/10 bg-[#0b1016]/78">
-      <div className="border-b border-white/10 px-6 py-4">
+    <section className="overflow-hidden rounded-2xl border border-white/15 bg-white/[0.03]">
+      <div className="border-b border-white/15 px-6 py-4">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <div className="text-sm font-semibold">All KSIs</div>
@@ -93,7 +93,7 @@ export default function KsiListClient({
           <a
             key={k.id}
             href={`/trust/ksis/${encodeURIComponent(k.id)}`}
-            className="group relative block px-6 py-4 transition will-change-transform hover:-translate-y-[1px] hover:bg-white/[0.04]"
+            className="group relative block px-6 py-4 transition will-change-transform hover:-translate-y-[1px] hover:bg-white/[0.05]"
           >
             <div className="flex items-start gap-4">
               <div className={`mt-1 h-3 w-3 shrink-0 rounded-full ${ballClass(k.status)}`} />
@@ -102,7 +102,7 @@ export default function KsiListClient({
                   <div className="text-sm font-semibold text-white/90">{k.id}</div>
                   <div className="text-sm text-white/70">{k.name}</div>
                   {k.group ? (
-                    <span className="rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-xs text-white/60">
+                    <span className="rounded-full border border-white/15 bg-white/[0.03] px-2 py-0.5 text-xs text-white/60">
                       {k.group}
                     </span>
                   ) : null}

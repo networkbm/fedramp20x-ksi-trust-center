@@ -43,7 +43,7 @@ export default function StatusTrend({ points }: { points: Point[] }) {
   }, []);
 
   return (
-    <div className="min-w-0 rounded-2xl border border-white/10 bg-[#0b1016]/78 p-5">
+    <div className="min-w-0 rounded-2xl border border-white/15 bg-white/[0.03] p-5">
       <div>
         <div className="text-sm font-semibold">KSI Status Trend</div>
         <div className="mt-1 text-xs text-white/50">PASS / FAIL / PENDING over time</div>
@@ -76,7 +76,7 @@ export default function StatusTrend({ points }: { points: Point[] }) {
                 const pending = Number((p.find((x) => (x as TooltipEntry).dataKey === "PENDING") as TooltipEntry | undefined)?.value ?? 0);
 
                 return (
-                  <div className="rounded-xl border border-white/10 bg-[#0a0f15]/72 px-3 py-2 text-xs text-white/80 shadow-[0_10px_30px_rgba(0,0,0,0.45)]">
+                  <div className="rounded-xl border border-white/15 bg-white/[0.03] px-3 py-2 text-xs text-white/80 shadow-[0_10px_30px_rgba(0,0,0,0.45)]">
                     <div className="font-semibold">{String(label)}</div>
                     <div className="mt-1 space-y-1 text-white/70">
                       <div>Passed: {pass}</div>

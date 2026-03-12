@@ -22,8 +22,8 @@ export default function DataWebFX() {
       window.matchMedia &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    const density = 0.00006;
-    const maxLinkDist = 150;
+    const density = 0.00007;
+    const maxLinkDist = 164;
     const maxLinkDist2 = maxLinkDist * maxLinkDist;
 
     function resize() {
@@ -49,8 +49,8 @@ export default function DataWebFX() {
           next.push({
             x: Math.random() * w,
             y: Math.random() * h,
-            vx: (Math.random() - 0.5) * 0.18,
-            vy: (Math.random() - 0.5) * 0.18,
+            vx: (Math.random() - 0.5) * 0.24,
+            vy: (Math.random() - 0.5) * 0.24,
             r
           });
         }
@@ -104,7 +104,7 @@ export default function DataWebFX() {
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
           ctx.lineWidth = 1;
-          ctx.strokeStyle = `rgba(148,163,184,${0.09 * t})`;
+          ctx.strokeStyle = `rgba(186,230,253,${0.11 * t})`;
           ctx.stroke();
         }
       }
@@ -113,7 +113,7 @@ export default function DataWebFX() {
         const n = nodes[i];
         ctx.beginPath();
         ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(148,163,184,0.18)";
+        ctx.fillStyle = "rgba(186,230,253,0.18)";
         ctx.fill();
       }
 
@@ -140,7 +140,7 @@ export default function DataWebFX() {
   return (
     <canvas
       ref={ref}
-      className="absolute inset-0 h-full w-full opacity-[0.32]"
+      className="absolute inset-0 h-full w-full opacity-[0.4]"
       aria-hidden="true"
     />
   );

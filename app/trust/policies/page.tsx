@@ -28,7 +28,7 @@ export default async function PoliciesPage() {
 
   return (
     <div className="space-y-6">
-      <section className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-6">
+      <section className="rounded-2xl border border-white/15 bg-white/[0.03] p-6">
         <div className="flex items-center gap-2 text-sm text-white/60">
           <PoliciesIcon className="h-3.5 w-3.5" />
           <span>Policies</span>
@@ -41,8 +41,8 @@ export default async function PoliciesPage() {
       </section>
 
       <section className="grid gap-6 lg:grid-cols-2">
-        <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#0b1016]/78">
-          <div className="border-b border-white/10 px-6 py-4">
+        <div className="overflow-hidden rounded-2xl border border-white/15 bg-white/[0.03]">
+          <div className="border-b border-white/15 px-6 py-4">
             <div className="text-sm font-semibold">Public Policies</div>
             <div className="text-xs text-white/50">Available to all visitors</div>
           </div>
@@ -68,8 +68,8 @@ export default async function PoliciesPage() {
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#0b1016]/78">
-          <div className="border-b border-white/10 px-6 py-4">
+        <div className="overflow-hidden rounded-2xl border border-white/15 bg-white/[0.03]">
+          <div className="border-b border-white/15 px-6 py-4">
             <div className="text-sm font-semibold">Gated Policies</div>
             <div className="text-xs text-white/50">Available upon request / NDA</div>
           </div>
@@ -87,7 +87,7 @@ export default async function PoliciesPage() {
                   </div>
                   <div className="mt-2 text-sm text-white/70">{p.summary}</div>
                   <div className="mt-2 text-xs text-white/40">Updated: {p.updated}</div>
-                  <div className="mt-3 rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-xs text-white/60">
+                  <div className="mt-3 rounded-xl border border-white/15 bg-white/[0.03] px-4 py-2 text-xs text-white/60">
                     Request access: demo@example.com
                   </div>
                 </div>

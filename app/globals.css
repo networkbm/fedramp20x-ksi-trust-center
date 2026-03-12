@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #05070b;
-  --foreground: #edf2f7;
-  --muted: rgba(237, 242, 247, 0.62);
-  --surface: rgba(14, 19, 28, 0.78);
+  --background: #060a12;
+  --foreground: #ecf3ff;
+  --muted: rgba(204, 219, 237, 0.72);
+  --surface: rgba(255, 255, 255, 0.03);
   --surface-2: rgba(255, 255, 255, 0.05);
-  --border: rgba(148, 163, 184, 0.16);
+  --border: rgba(255, 255, 255, 0.16);
   --accent: #7dd3fc;
   --accent-soft: rgba(125, 211, 252, 0.14);
 }
@@ -26,9 +26,9 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(1200px 700px at 14% -8%, rgba(96, 165, 250, 0.10), transparent 58%),
-    radial-gradient(900px 560px at 88% 0%, rgba(56, 189, 248, 0.08), transparent 52%),
-    linear-gradient(180deg, #070a10 0%, #05070b 42%, #04060a 100%);
+    radial-gradient(1200px 760px at 12% -6%, rgba(125, 211, 252, 0.14), transparent 56%),
+    radial-gradient(1000px 620px at 88% 0%, rgba(56, 189, 248, 0.12), transparent 54%),
+    linear-gradient(180deg, #0a101b 0%, #060a12 44%, #04070f 100%);
   color: var(--foreground);
   font-family: inherit;
   letter-spacing: -0.012em;
@@ -120,6 +120,47 @@ body {
   }
 }
 
+@keyframes cyberDrift {
+  0% {
+    transform: translate3d(-4%, -2%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(4%, 3%, 0) scale(1.03);
+  }
+  100% {
+    transform: translate3d(-4%, -2%, 0) scale(1);
+  }
+}
+
+@keyframes scanSweep {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.35;
+  }
+  60% {
+    opacity: 0.12;
+  }
+  100% {
+    transform: translateY(140%);
+    opacity: 0;
+  }
+}
+
+@keyframes huePulse {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.36;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
 .animate-bg-dots {
   animation: bgDots 18s linear infinite;
 }
@@ -138,4 +179,16 @@ body {
 
 .animate-sheen {
   animation: sheen 14s ease-in-out infinite;
+}
+
+.animate-cyber-drift {
+  animation: cyberDrift 18s ease-in-out infinite;
+}
+
+.animate-scan-sweep {
+  animation: scanSweep 6.5s linear infinite;
+}
+
+.animate-hue-pulse {
+  animation: huePulse 4.2s ease-in-out infinite;
 }

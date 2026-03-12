@@ -8,7 +8,7 @@ export default function KsiSearch({
   onChange: (v: string) => void;
 }) {
   return (
-    <div className="flex w-full items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-3 py-2 focus-within:border-white/20 focus-within:bg-white/10">
+    <div className="flex w-full items-center gap-2 rounded-2xl border border-white/15 bg-white/[0.03] px-3 py-2 focus-within:border-white/20 focus-within:bg-white/10">
       <div className="text-xs text-white/40">Search</div>
       <input
         value={value}
@@ -20,7 +20,7 @@ export default function KsiSearch({
         <button
           type="button"
           onClick={() => onChange("")}
-          className="rounded-xl border border-white/10 bg-white/5 px-2 py-1 text-xs text-white/60 hover:bg-white/10 hover:text-white/80"
+          className="rounded-xl border border-white/15 bg-white/[0.03] px-2 py-1 text-xs text-white/60 hover:bg-white/[0.05] hover:text-white/80"
         >
           Clear
         </button>

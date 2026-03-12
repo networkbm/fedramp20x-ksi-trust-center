@@ -72,7 +72,7 @@ export default function KsiValidation({ ksiId }: { ksiId: string }) {
   const canSave = threePao.trim().length > 0 && assessorName.trim().length > 0;
 
   return (
-    <div className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-6">
+    <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-6">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <div className="text-sm font-semibold">Validation</div>
@@ -85,7 +85,7 @@ export default function KsiValidation({ ksiId }: { ksiId: string }) {
               Validated
             </span>
           ) : (
-            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/60">
+            <span className="rounded-full border border-white/15 bg-white/[0.03] px-3 py-1 text-xs text-white/60">
               Not validated
             </span>
           )}
@@ -93,7 +93,7 @@ export default function KsiValidation({ ksiId }: { ksiId: string }) {
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-xs text-white/80 hover:bg-white/10"
+            className="rounded-xl border border-white/15 bg-white/[0.03] px-4 py-2 text-xs text-white/80 hover:bg-white/[0.05]"
           >
             {record ? "Edit" : "Validate KSI"}
           </button>
@@ -101,7 +101,7 @@ export default function KsiValidation({ ksiId }: { ksiId: string }) {
       </div>
 
       {loaded && record ? (
-        <div className="mt-4 rounded-2xl border border-white/10 bg-white/5 p-4">
+        <div className="mt-4 rounded-2xl border border-white/15 bg-white/[0.03] p-4">
           <div className="text-xs text-white/50">Validated by</div>
           <div className="mt-1 text-sm font-semibold text-white/90">{record.three_pao}</div>
           <div className="mt-2 text-sm text-white/70">
@@ -123,8 +123,8 @@ export default function KsiValidation({ ksiId }: { ksiId: string }) {
             if (e.target === e.currentTarget) setOpen(false);
           }}
         >
-          <div className="w-full max-w-lg rounded-2xl border border-white/10 bg-[#0a0f15]/72 shadow-[0_20px_80px_rgba(0,0,0,0.6)]">
-            <div className="border-b border-white/10 px-5 py-4">
+          <div className="w-full max-w-lg rounded-2xl border border-white/15 bg-white/[0.03] shadow-[0_20px_80px_rgba(0,0,0,0.6)]">
+            <div className="border-b border-white/15 px-5 py-4">
               <div className="text-sm font-semibold">Validate KSI</div>
               <div className="mt-1 text-xs text-white/50">{ksiId}</div>
             </div>
@@ -136,7 +136,7 @@ export default function KsiValidation({ ksiId }: { ksiId: string }) {
                   value={threePao}
                   onChange={(e) => setThreePao(e.target.value)}
                   placeholder="Insert here..."
-                  className="w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white/80 placeholder:text-white/30 outline-none focus:border-white/20 focus:bg-white/10"
+                  className="w-full rounded-xl border border-white/15 bg-white/[0.03] px-3 py-2 text-sm text-white/80 placeholder:text-white/30 outline-none focus:border-white/20 focus:bg-white/[0.06]"
                 />
               </div>
 
@@ -146,20 +146,20 @@ export default function KsiValidation({ ksiId }: { ksiId: string }) {
                   value={assessorName}
                   onChange={(e) => setAssessorName(e.target.value)}
                   placeholder="Insert here..."
-                  className="w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white/80 placeholder:text-white/30 outline-none focus:border-white/20 focus:bg-white/10"
+                  className="w-full rounded-xl border border-white/15 bg-white/[0.03] px-3 py-2 text-sm text-white/80 placeholder:text-white/30 outline-none focus:border-white/20 focus:bg-white/[0.06]"
                 />
               </div>
 
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-xs text-white/60">
+              <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-4 text-xs text-white/60">
                 This is a demo no real data.
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/10 px-5 py-4">
+            <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/15 px-5 py-4">
               <button
                 type="button"
                 onClick={() => setOpen(false)}
-                className="rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-xs text-white/70 hover:bg-white/10"
+                className="rounded-xl border border-white/15 bg-white/[0.03] px-4 py-2 text-xs text-white/70 hover:bg-white/[0.05]"
               >
                 Cancel
               </button>
@@ -182,7 +182,7 @@ export default function KsiValidation({ ksiId }: { ksiId: string }) {
                   className={`rounded-xl border px-4 py-2 text-xs ${
                     canSave
                       ? "border-emerald-400/20 bg-emerald-400/10 text-emerald-200 hover:bg-emerald-400/15"
-                      : "border-white/10 bg-white/5 text-white/35"
+                      : "border-white/15 bg-white/[0.02] text-white/35"
                   }`}
                 >
                   Save validation

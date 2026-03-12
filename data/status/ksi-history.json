@@ -5,19 +5,19 @@
     "notes": "Demo trend data for PASS/FAIL/PENDING over time."
   },
   "points": [
-    { "date": "2026-01-03", "PASS": 0, "FAIL": 1, "PENDING": 66 },
-    { "date": "2026-01-04", "PASS": 0, "FAIL": 1, "PENDING": 66 },
-    { "date": "2026-01-05", "PASS": 0, "FAIL": 1, "PENDING": 66 },
-    { "date": "2026-01-06", "PASS": 1, "FAIL": 1, "PENDING": 65 },
-    { "date": "2026-01-07", "PASS": 1, "FAIL": 1, "PENDING": 65 },
-    { "date": "2026-01-08", "PASS": 2, "FAIL": 1, "PENDING": 64 },
-    { "date": "2026-01-09", "PASS": 2, "FAIL": 1, "PENDING": 64 },
-    { "date": "2026-01-10", "PASS": 2, "FAIL": 0, "PENDING": 65 },
-    { "date": "2026-01-11", "PASS": 2, "FAIL": 0, "PENDING": 65 },
-    { "date": "2026-01-12", "PASS": 2, "FAIL": 0, "PENDING": 65 },
-    { "date": "2026-01-13", "PASS": 2, "FAIL": 0, "PENDING": 65 },
-    { "date": "2026-01-14", "PASS": 2, "FAIL": 0, "PENDING": 65 },
-    { "date": "2026-01-15", "PASS": 2, "FAIL": 0, "PENDING": 65 },
-    { "date": "2026-01-16", "PASS": 2, "FAIL": 0, "PENDING": 65 }
+    { "date": "2026-02-27", "PASS": 4, "FAIL": 1, "PENDING": 62 },
+    { "date": "2026-02-28", "PASS": 4, "FAIL": 1, "PENDING": 62 },
+    { "date": "2026-03-01", "PASS": 5, "FAIL": 1, "PENDING": 61 },
+    { "date": "2026-03-02", "PASS": 5, "FAIL": 1, "PENDING": 61 },
+    { "date": "2026-03-03", "PASS": 5, "FAIL": 1, "PENDING": 61 },
+    { "date": "2026-03-04", "PASS": 5, "FAIL": 1, "PENDING": 61 },
+    { "date": "2026-03-05", "PASS": 6, "FAIL": 1, "PENDING": 60 },
+    { "date": "2026-03-06", "PASS": 6, "FAIL": 1, "PENDING": 60 },
+    { "date": "2026-03-07", "PASS": 6, "FAIL": 1, "PENDING": 60 },
+    { "date": "2026-03-08", "PASS": 7, "FAIL": 0, "PENDING": 60 },
+    { "date": "2026-03-09", "PASS": 7, "FAIL": 0, "PENDING": 60 },
+    { "date": "2026-03-10", "PASS": 8, "FAIL": 0, "PENDING": 59 },
+    { "date": "2026-03-11", "PASS": 9, "FAIL": 0, "PENDING": 58 },
+    { "date": "2026-03-12", "PASS": 10, "FAIL": 0, "PENDING": 57 }
   ]
 }

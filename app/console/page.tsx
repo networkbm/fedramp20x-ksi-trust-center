@@ -13,6 +13,19 @@ export default async function ConsoleHome() {
   const history = await loadHistory();
   const view = mergeKsiView(ksis, statuses);
   const counts = computeStatusCounts(view.items);
+  const historyPoints =
+    history.points.length > 0
+      ? history.points.map((point, index) =>
+          index === history.points.length - 1
+            ? {
+                ...point,
+                PASS: counts.PASS,
+                FAIL: counts.FAIL,
+                PENDING: counts.PENDING
+              }
+            : point
+        )
+      : history.points;
 
   const topRisk = view.items.filter((x) => x.status === "FAIL").slice(0, 5);
   const pending = view.items.filter((x) => x.status === "PENDING").slice(0, 5);
@@ -26,14 +39,14 @@ export default async function ConsoleHome() {
       <section className="grid gap-4 lg:grid-cols-3">
         <StatusDonut counts={counts} />
         <div className="lg:col-span-2">
-          <StatusTrend points={history.points} />
+          <StatusTrend points={historyPoints} />
         </div>
       </section>
 
       <section className="grid gap-4 md:grid-cols-3">
         <a
           href="/trust/compliance"
-          className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.04]"
+          className="rounded-2xl border border-white/15 bg-white/[0.03] p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.05]"
         >
           <div className="text-xs text-white/60">Quick Action</div>
           <div className="mt-2 flex items-center gap-2 text-sm font-semibold">
@@ -45,16 +58,16 @@ export default async function ConsoleHome() {
 
         <a
           href="/trust/compliance"
-          className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.04]"
+          className="rounded-2xl border border-white/15 bg-white/[0.03] p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.05]"
         >
           <div className="text-xs text-white/60">Quick Action</div>
-          <div className="mt-2 text-sm font-semibold">Demo Data</div>
-          <div className="mt-2 text-sm text-white/60">Placeholder for CSV/PDF export workflow.</div>
+          <div className="mt-2 text-sm font-semibold">Export Queue</div>
+          <div className="mt-2 text-sm text-white/60">Review the latest report package and evidence export handoff.</div>
         </a>
 
         <a
           href="/trust"
-          className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.04]"
+          className="rounded-2xl border border-white/15 bg-white/[0.03] p-5 transition hover:-translate-y-[1px] hover:bg-white/[0.05]"
         >
           <div className="text-xs text-white/60">Quick Action</div>
           <div className="mt-2 flex items-center gap-2 text-sm font-semibold">
@@ -66,8 +79,8 @@ export default async function ConsoleHome() {
       </section>
 
       <section className="grid gap-4 lg:grid-cols-3">
-        <div className="rounded-2xl border border-white/10 bg-[#0b1016]/78">
-          <div className="border-b border-white/10 px-5 py-4">
+        <div className="rounded-2xl border border-white/15 bg-white/[0.03]">
+          <div className="border-b border-white/15 px-5 py-4">
             <div className="text-sm font-semibold">Failed KSIs</div>
             <div className="text-xs text-white/50">Prioritize remediation</div>
           </div>
@@ -77,7 +90,7 @@ export default async function ConsoleHome() {
                 <a
                   key={k.id}
                   href={`/trust/ksis/${encodeURIComponent(k.id)}`}
-                  className="block px-5 py-3 text-sm text-white/70 transition hover:bg-white/[0.04] hover:text-white"
+                  className="block px-5 py-3 text-sm text-white/70 transition hover:bg-white/[0.05] hover:text-white"
                 >
                   {k.id} — {k.name}
                 </a>
@@ -88,8 +101,8 @@ export default async function ConsoleHome() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-[#0b1016]/78">
-          <div className="border-b border-white/10 px-5 py-4">
+        <div className="rounded-2xl border border-white/15 bg-white/[0.03]">
+          <div className="border-b border-white/15 px-5 py-4">
             <div className="text-sm font-semibold">Pending KSIs</div>
             <div className="text-xs text-white/50">Next up for evidence mapping</div>
           </div>
@@ -98,7 +111,7 @@ export default async function ConsoleHome() {
               <a
                 key={k.id}
                 href={`/trust/ksis/${encodeURIComponent(k.id)}`}
-                className="block px-5 py-3 text-sm text-white/70 transition hover:bg-white/[0.04] hover:text-white"
+                className="block px-5 py-3 text-sm text-white/70 transition hover:bg-white/[0.05] hover:text-white"
               >
                 {k.id} — {k.name}
               </a>
@@ -106,8 +119,8 @@ export default async function ConsoleHome() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-[#0b1016]/78">
-          <div className="border-b border-white/10 px-5 py-4">
+        <div className="rounded-2xl border border-white/15 bg-white/[0.03]">
+          <div className="border-b border-white/15 px-5 py-4">
             <div className="text-sm font-semibold">Recently Verified</div>
             <div className="text-xs text-white/50">Latest status updates</div>
           </div>
@@ -117,7 +130,7 @@ export default async function ConsoleHome() {
                 <a
                   key={k.id}
                   href={`/trust/ksis/${encodeURIComponent(k.id)}`}
-                  className="block px-5 py-3 text-sm text-white/70 transition hover:bg-white/[0.04] hover:text-white"
+                  className="block px-5 py-3 text-sm text-white/70 transition hover:bg-white/[0.05] hover:text-white"
                 >
                   <div className="flex items-center justify-between gap-3">
                     <span className="min-w-0 truncate">

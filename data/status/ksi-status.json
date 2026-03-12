@@ -2,7 +2,7 @@
   "meta": {
     "framework": "FedRAMP 20x Key Security Indicators",
     "environment": "demo",
-    "last_updated": "2026-01-16",
+    "last_updated": "2026-03-12",
     "notes": "Demo Data"
   },
 
@@ -27,40 +27,83 @@
       ]
     },
 
-    "KSI-LOG-01": {
+    "KSI-IAM-03": {
       "status": "PASS",
-      "last_verified": "2026-01-12",
-      "summary": "Centralized audit logging is enabled and logs are retained according to policy.",
+      "last_verified": "2026-03-11",
+      "summary": "Privileged access pathways are reviewed with approval checkpoints and supporting evidence retained.",
+      "evidence": [
+        "privileged-access-review-q4.pdf",
+        "iam-mfa-report.pdf"
+      ]
+    },
+
+    "KSI-IAM-04": {
+      "status": "PASS",
+      "last_verified": "2026-03-12",
+      "summary": "Session and authentication controls were validated against current access policy expectations.",
+      "evidence": [
+        "iam-mfa-report.pdf",
+        "privileged-access-review-q4.pdf"
+      ]
+    },
+
+    "KSI-IAM-05": {
+      "status": "PASS",
+      "last_verified": "2026-03-09",
+      "summary": "Privileged role boundaries and entitlement controls were validated in the latest review cycle.",
+      "evidence": [
+        "privileged-access-review-q4.pdf",
+        "iam-mfa-report.pdf"
+      ]
+    },
+
+    "KSI-SVC-01": {
+      "status": "PASS",
+      "last_verified": "2026-03-10",
+      "summary": "Service-level control baselines are now continuously checked and reported within the assurance pipeline.",
       "evidence": [
         "audit-logging-enabled.png",
-        "log-retention-policy.pdf"
-      ]
-    },
-
-    "KSI-VULN-01": {
-      "status": "PENDING",
-      "last_verified": "2026-01-05",
-      "summary": "Automated vulnerability scanning is in place, but remediation SLAs are still being finalized.",
-      "evidence": [
-        "vulnerability-scan-summary.pdf"
-      ]
-    },
-
-    "KSI-ASSET-01": {
-      "status": "PASS",
-      "last_verified": "2026-01-09",
-      "summary": "An inventory of in-scope system assets is maintained and reviewed regularly.",
-      "evidence": [
         "asset-inventory.csv"
       ]
     },
 
-    "KSI-IR-01": {
-      "status": "FAIL",
-      "last_verified": "2026-01-02",
-      "summary": "An incident response plan exists, but no evidence of recent testing or tabletop exercises was found.",
+    "KSI-SVC-05": {
+      "status": "PASS",
+      "last_verified": "2026-03-07",
+      "summary": "Deployment and service integrity checks now pass automated validation criteria.",
       "evidence": [
-        "incident-response-plan.pdf"
+        "vulnerability-scan-summary.pdf",
+        "asset-inventory.csv"
+      ]
+    },
+
+    "KSI-SVC-04": {
+      "status": "PASS",
+      "last_verified": "2026-03-08",
+      "summary": "Service assurance checkpoints include documented escalation and remediation evidence.",
+      "evidence": [
+        "incident-response-plan.pdf",
+        "log-retention-policy.pdf"
+      ]
+    },
+
+    "KSI-SVC-08": {
+      "status": "PASS",
+      "last_verified": "2026-03-06",
+      "summary": "Service recovery evidence and operational readiness checks were added to the latest assurance cycle.",
+      "evidence": [
+        "incident-response-plan.pdf",
+        "asset-inventory.csv"
+      ]
+    },
+
+    "KSI-SVC-02": {
+      "status": "PASS",
+      "last_verified": "2026-03-12",
+      "summary": "Service baseline controls were re-verified in the latest continuous assurance run.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
       ]
     }
   }

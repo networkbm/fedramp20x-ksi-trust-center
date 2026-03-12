@@ -24,7 +24,7 @@ export default async function KsiDetailPage({ params }: { params: Promise<{ id: 
   if (!ksi) {
     return (
       <div className="space-y-6">
-        <section className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-6">
+        <section className="rounded-2xl border border-white/15 bg-white/[0.03] p-6">
           <div className="text-sm text-white/60">Not found</div>
           <h1 className="mt-2 text-2xl font-semibold tracking-tight">KSI not found</h1>
           <div className="mt-3 text-sm text-white/70">
@@ -33,18 +33,18 @@ export default async function KsiDetailPage({ params }: { params: Promise<{ id: 
           <div className="mt-4">
             <a
               href="/trust/compliance"
-              className="rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80 hover:bg-white/10"
+              className="rounded-xl border border-white/15 bg-white/[0.03] px-4 py-2 text-sm text-white/80 hover:bg-white/[0.05]"
             >
               Back to KSIs
             </a>
           </div>
         </section>
 
-        <section className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-6">
+        <section className="rounded-2xl border border-white/15 bg-white/[0.03] p-6">
           <div className="text-sm font-semibold">Debug (first 10 KSI IDs)</div>
           <div className="mt-3 grid gap-2 text-sm text-white/70">
             {view.items.slice(0, 10).map((k) => (
-              <div key={k.id} className="rounded-xl border border-white/10 bg-white/5 px-4 py-2">
+              <div key={k.id} className="rounded-xl border border-white/15 bg-white/[0.03] px-4 py-2">
                 {k.id}
               </div>
             ))}
@@ -56,7 +56,7 @@ export default async function KsiDetailPage({ params }: { params: Promise<{ id: 
 
   return (
     <div className="space-y-6">
-      <section className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-6">
+      <section className="rounded-2xl border border-white/15 bg-white/[0.03] p-6">
         <div className="flex items-start justify-between gap-4">
           <div>
             <div className="text-sm text-white/60">Key Security Indicator</div>
@@ -64,7 +64,7 @@ export default async function KsiDetailPage({ params }: { params: Promise<{ id: 
               {ksi.id} — {ksi.name}
             </h1>
             {ksi.group ? (
-              <div className="mt-2 inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/60">
+              <div className="mt-2 inline-flex rounded-full border border-white/15 bg-white/[0.03] px-3 py-1 text-xs text-white/60">
                 {ksi.group}
               </div>
             ) : null}
@@ -77,13 +77,13 @@ export default async function KsiDetailPage({ params }: { params: Promise<{ id: 
         </div>
       </section>
 
-      <section className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-6">
+      <section className="rounded-2xl border border-white/15 bg-white/[0.03] p-6">
         <div className="text-sm font-semibold">Description</div>
         <p className="mt-3 max-w-3xl text-sm leading-6 text-white/70">{ksi.description}</p>
       </section>
 
       <section className="grid gap-6 md:grid-cols-2">
-        <div className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-6">
+        <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-6">
           <div className="text-sm font-semibold">Status Summary</div>
           {ksi.summary ? (
             <p className="mt-3 text-sm leading-6 text-white/70">{ksi.summary}</p>
@@ -96,7 +96,7 @@ export default async function KsiDetailPage({ params }: { params: Promise<{ id: 
           ) : null}
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-6">
+        <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-6">
           <div className="text-sm font-semibold">Evidence</div>
 
           {ksi.evidence && ksi.evidence.length > 0 ? (
@@ -104,14 +104,14 @@ export default async function KsiDetailPage({ params }: { params: Promise<{ id: 
               {ksi.evidence.map((e) => (
                 <li
                   key={e}
-                  className="flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-2"
+                  className="flex items-center justify-between gap-3 rounded-xl border border-white/15 bg-white/[0.03] px-4 py-2"
                 >
                   <span className="min-w-0 truncate text-white/70">{e}</span>
                   <a
                     href={`/evidence/demo/${encodeURIComponent(e)}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="shrink-0 rounded-lg border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70 hover:bg-white/10"
+                    className="shrink-0 rounded-lg border border-white/15 bg-white/[0.03] px-3 py-1 text-xs text-white/70 hover:bg-white/[0.05]"
                   >
                     View
                   </a>
@@ -125,7 +125,7 @@ export default async function KsiDetailPage({ params }: { params: Promise<{ id: 
       </section>
       <KsiValidation ksiId={ksi.id} />
 
-      <section className="rounded-2xl border border-white/10 bg-white/5 p-4 text-xs text-white/50">Demo Data</section>
+      <section className="rounded-2xl border border-white/15 bg-white/[0.03] p-4 text-xs text-white/50">Demo Data</section>
     </div>
   );
 }

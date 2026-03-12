@@ -38,12 +38,16 @@ function enrichItems(items: KsiViewItem[], validations: ValidationRecord[]): Enr
 
 function wantsValidatedOnly(prompt: string) {
   const lower = prompt.toLowerCase();
-  return /(validated|validation|assessor|assessed|3pao|attestation)/.test(lower);
+  return /(assessor|assessed by|3pao|attestation|third-party|third party|independent assessor)/.test(lower);
 }
 
 function wantsUnvalidatedOnly(prompt: string) {
   const lower = prompt.toLowerCase();
-  return /(not validated|unvalidated|without validation|missing validation)/.test(lower);
+  return /(not validated by assessor|unvalidated by assessor|without assessor validation|missing assessor validation)/.test(lower);
+}
+
+function wantsValidationLanguage(prompt: string) {
+  return /\bvalidated\b|\bvalidation\b/.test(prompt.toLowerCase());
 }
 
 function tokenize(value: string) {
@@ -190,6 +194,9 @@ function buildFallbackAnswer(prompt: string, items: KsiViewItem[], validations: 
     if (wantsValidatedOnly(lower)) {
       return `There ${validatedItems.length === 1 ? "is" : "are"} ${validatedItems.length} validated ${validatedItems.length === 1 ? "KSI" : "KSIs"} in the current browser session.`;
     }
+    if (wantsValidationLanguage(lower)) {
+      return `There are ${counts.PASS} validated KSIs in the current status dataset.`;
+    }
     return `There are ${counts.total} KSIs in the current dataset: ${counts.PASS} passed, ${counts.FAIL} failed, and ${counts.PENDING} pending.`;
   }
 
@@ -214,6 +221,10 @@ function buildFallbackAnswer(prompt: string, items: KsiViewItem[], validations: 
     return `There are ${counts.PASS} passed KSIs in the current dataset.`;
   }
 
+  if (wantsValidationLanguage(lower)) {
+    return `There are ${counts.PASS} validated KSIs in the current status dataset.`;
+  }
+
   if (/pending/.test(lower)) {
     return `There are ${counts.PENDING} pending KSIs in the current dataset.`;
   }
@@ -231,6 +242,7 @@ function buildModelPrompt(prompt: string, items: KsiViewItem[], matched: AiMatch
       "Use only the supplied dataset context.",
       "Do not invent KSI IDs, counts, or statuses.",
       "Validation records come from the browser session and matter for prompts about assessor validation.",
+      "If the user says validated without mentioning assessor/3PAO/attestation, interpret validated as PASS status in the dataset.",
       "Respond as JSON with keys: answer (string), focusKsiIds (string[]).",
       "If the user asks for counts, use exact numbers from the context.",
       "If the user asks for matching KSIs, include the most relevant KSI IDs in focusKsiIds."

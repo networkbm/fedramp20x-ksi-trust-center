@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import BackgroundFX from "@/components/ui/BackgroundFX";
 import {
   ComplianceIcon,
   ConsoleIcon,
@@ -17,13 +16,11 @@ export const metadata: Metadata = {
 export default function TrustLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen text-[#e6e8ee]">
-      <BackgroundFX />
-
       <div className="mx-auto max-w-7xl px-6 py-10">
         <div className="flex items-start gap-6">
           <aside className="hidden w-64 shrink-0 md:block">
             <div className="sticky top-8 self-start">
-              <div className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-4">
+              <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-4 backdrop-blur-[2px]">
                 <div className="mb-4">
                   <div className="flex items-center gap-2 text-sm font-semibold tracking-wide text-white/90">
                     <TrustCenterIcon className="text-cyan-300" />
@@ -39,7 +36,7 @@ export default function TrustLayout({ children }: { children: React.ReactNode })
                   <nav className="space-y-1 text-sm">
                     <a
                       href="/trust"
-                      className="flex items-center gap-2 rounded-xl px-3 py-2 text-white/80 hover:bg-white/5 hover:text-white"
+                      className="flex items-center gap-2 rounded-xl px-3 py-2 text-white/80 hover:bg-white/[0.05] hover:text-white"
                     >
                       <OverviewIcon />
                       <span>Overview</span>
@@ -47,7 +44,7 @@ export default function TrustLayout({ children }: { children: React.ReactNode })
 
                     <a
                       href="/trust/compliance"
-                      className="flex items-center gap-2 rounded-xl px-3 py-2 text-white/80 hover:bg-white/5 hover:text-white"
+                      className="flex items-center gap-2 rounded-xl px-3 py-2 text-white/80 hover:bg-white/[0.05] hover:text-white"
                     >
                       <ComplianceIcon />
                       <span>Compliance (KSIs)</span>
@@ -55,7 +52,7 @@ export default function TrustLayout({ children }: { children: React.ReactNode })
 
                     <a
                       href="/trust/policies"
-                      className="flex items-center gap-2 rounded-xl px-3 py-2 text-white/80 hover:bg-white/5 hover:text-white"
+                      className="flex items-center gap-2 rounded-xl px-3 py-2 text-white/80 hover:bg-white/[0.05] hover:text-white"
                     >
                       <PoliciesIcon />
                       <span>Policies</span>
@@ -63,7 +60,7 @@ export default function TrustLayout({ children }: { children: React.ReactNode })
 
                     <a
                       href="/trust/vulnerability-disclosure"
-                      className="flex items-center gap-2 rounded-xl px-3 py-2 text-white/80 hover:bg-white/5 hover:text-white"
+                      className="flex items-center gap-2 rounded-xl px-3 py-2 text-white/80 hover:bg-white/[0.05] hover:text-white"
                     >
                       <VulnerabilityIcon />
                       <span>Vulnerability Disclosure</span>
@@ -71,7 +68,7 @@ export default function TrustLayout({ children }: { children: React.ReactNode })
 
                     <a
                       href="/console"
-                      className="flex items-center gap-2 rounded-xl px-3 py-2 text-white/80 hover:bg-white/5 hover:text-white"
+                      className="flex items-center gap-2 rounded-xl px-3 py-2 text-white/80 hover:bg-white/[0.05] hover:text-white"
                     >
                       <ConsoleIcon />
                       <span>Console</span>
@@ -79,13 +76,13 @@ export default function TrustLayout({ children }: { children: React.ReactNode })
                   </nav>
                 </div>
 
-                <div className="mt-4 rounded-xl border border-white/10 bg-white/5 p-3 text-xs text-white/60">Demo Data</div>
+                <div className="mt-4 rounded-xl border border-white/15 bg-white/[0.03] p-3 text-xs text-white/60">Demo Data</div>
               </div>
             </div>
           </aside>
 
           <main className="min-w-0 flex-1 space-y-6">
-            <div className="rounded-2xl border border-white/10 bg-[#0b1016]/78 p-4">
+            <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-4 backdrop-blur-[2px]">
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <div>
                   <div className="flex items-center gap-2 text-lg font-semibold">

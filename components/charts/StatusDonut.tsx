@@ -76,7 +76,7 @@ export default function StatusDonut({ counts }: { counts: StatusCounts }) {
   };
 
   return (
-    <div className="min-w-0 rounded-2xl border border-white/10 bg-[#0b1016]/78 p-5">
+    <div className="min-w-0 rounded-2xl border border-white/15 bg-white/[0.03] p-5">
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="text-sm font-semibold">KSI Status Breakdown</div>
@@ -84,7 +84,7 @@ export default function StatusDonut({ counts }: { counts: StatusCounts }) {
             Passed / Failed / Pending
           </div>
         </div>
-        <div className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
+        <div className="rounded-full border border-white/15 bg-white/[0.03] px-3 py-1 text-xs text-white/70">
           Total: {counts.total}
         </div>
       </div>
@@ -101,7 +101,7 @@ export default function StatusDonut({ counts }: { counts: StatusCounts }) {
                 const percent = pct(value, counts.total);
 
                 return (
-                  <div className="rounded-xl border border-white/10 bg-[#0a0f15]/72 px-3 py-2 text-xs text-white/80 shadow-[0_10px_30px_rgba(0,0,0,0.45)]">
+                  <div className="rounded-xl border border-white/15 bg-white/[0.03] px-3 py-2 text-xs text-white/80 shadow-[0_10px_30px_rgba(0,0,0,0.45)]">
                     <div className="font-semibold">{name}</div>
                     <div className="mt-1 text-white/70">
                       {value} ({percent}%)
@@ -116,9 +116,9 @@ export default function StatusDonut({ counts }: { counts: StatusCounts }) {
               nameKey="name"
               innerRadius={72}
               outerRadius={92}
-              paddingAngle={3}
-              stroke="rgba(255,255,255,0.08)"
-              strokeWidth={1}
+              paddingAngle={0}
+              stroke="none"
+              strokeWidth={0}
               isAnimationActive={true}
             >
               {data.map((entry) => (
@@ -134,7 +134,7 @@ export default function StatusDonut({ counts }: { counts: StatusCounts }) {
       </div>
 
       <div className="mt-4 grid grid-cols-3 gap-3">
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-3">
+        <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-3">
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_14px_rgba(52,211,153,0.45)]" />
             <div className="text-xs text-white/60">Passed</div>
@@ -147,7 +147,7 @@ export default function StatusDonut({ counts }: { counts: StatusCounts }) {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-3">
+        <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-3">
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-rose-500 shadow-[0_0_14px_rgba(251,113,133,0.45)]" />
             <div className="text-xs text-white/60">Failed</div>
@@ -160,7 +160,7 @@ export default function StatusDonut({ counts }: { counts: StatusCounts }) {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-3">
+        <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-3">
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-amber-400 shadow-[0_0_14px_rgba(251,191,36,0.45)]" />
             <div className="text-xs text-white/60">Pending</div>
