@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import DataWebFX from "@/components/ui/DataWebFX";
 
 type ThemePreset = {
@@ -161,18 +161,32 @@ const presets: ThemePreset[] = [
   }
 ];
 
+const backgroundThemeListeners = new Set<() => void>();
+
+function subscribeToBackgroundTheme(listener: () => void) {
+  backgroundThemeListeners.add(listener);
+  return () => backgroundThemeListeners.delete(listener);
+}
+
+function emitBackgroundThemeChange() {
+  backgroundThemeListeners.forEach((listener) => listener());
+}
+
+function getSavedThemeId() {
+  if (typeof window === "undefined") return "ice";
+
+  const saved = window.localStorage.getItem("bg-theme");
+  return saved && presets.some((preset) => preset.id === saved) ? saved : "ice";
+}
+
 export default function BackgroundFX() {
-  const [themeId, setThemeId] = useState(() => {
-    if (typeof window === "undefined") return "ice";
-    const saved = window.localStorage.getItem("bg-theme");
-    return saved && presets.some((preset) => preset.id === saved) ? saved : "ice";
-  });
+  const themeId = useSyncExternalStore(subscribeToBackgroundTheme, getSavedThemeId, () => "ice");
   const [open, setOpen] = useState(false);
   const theme = presets.find((preset) => preset.id === themeId) ?? presets[0];
 
   function updateTheme(id: string) {
-    setThemeId(id);
     window.localStorage.setItem("bg-theme", id);
+    emitBackgroundThemeChange();
   }
 
   return (

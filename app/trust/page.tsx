@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AiIcon, ComplianceIcon, ConsoleIcon, TrustCenterIcon } from "@/components/ui/SectionIcons";
+import IngestionMap from "@/components/trust/IngestionMap";
 import LiveTelemetryCard from "@/components/trust/LiveTelemetryCard";
 import { loadKsis } from "@/lib/data/loadKsis";
 import { loadStatuses } from "@/lib/data/loadStatuses";
@@ -46,6 +47,8 @@ export default async function TrustHome() {
       </section>
 
       <LiveTelemetryCard compact counts={counts} lastUpdated={String(view.meta.last_updated ?? "")} />
+
+      <IngestionMap />
 
       <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-5">
