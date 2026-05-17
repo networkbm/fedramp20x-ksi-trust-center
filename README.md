@@ -4,7 +4,8 @@ It includes PASS / FAIL / PENDING status tracking, evidence linking, dashboard c
 
 ## Features
 
-- Loads all FedRAMP 20x KSIs from JSON (67 items)
+- Loads current FedRAMP 20x KSIs from JSON (60 items across 11 families)
+- Uses FedRAMP machine-readable documentation version 0.9.43-beta, last updated 2026-04-08
 - Status mapping (PASS / FAIL / PENDING) driven by repo JSON
 - Trust Center pages:
   - Overview
