@@ -25,13 +25,10 @@ html {
 
 body {
   min-height: 100vh;
-  background:
-    radial-gradient(1200px 760px at 12% -6%, rgba(125, 211, 252, 0.14), transparent 56%),
-    radial-gradient(1000px 620px at 88% 0%, rgba(56, 189, 248, 0.12), transparent 54%),
-    linear-gradient(180deg, #0a101b 0%, #060a12 44%, #04070f 100%);
+  background: #09090b;
   color: var(--foreground);
   font-family: inherit;
-  letter-spacing: -0.012em;
+  letter-spacing: 0;
 }
 
 .section-container {
@@ -257,6 +254,89 @@ body {
     opacity: 0.32;
     filter: drop-shadow(0 0 0 rgba(56, 189, 248, 0));
   }
+}
+
+@keyframes monitorScan {
+  0% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.75;
+  }
+  85% {
+    opacity: 0.55;
+  }
+  100% {
+    transform: translateX(1200%);
+    opacity: 0;
+  }
+}
+
+@keyframes monitorLane {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.42;
+  }
+  100% {
+    transform: translateX(210%);
+    opacity: 0;
+  }
+}
+
+@keyframes monitorPacket {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.8;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(72vw);
+    opacity: 0;
+  }
+}
+
+@keyframes monitorOrbit {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.04);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.animate-monitor-scan {
+  animation: monitorScan 3.4s ease-in-out infinite;
+}
+
+.animate-monitor-lane {
+  animation: monitorLane 7.2s ease-in-out infinite;
+}
+
+.animate-monitor-packet {
+  animation: monitorPacket 7.2s ease-in-out infinite;
+}
+
+.animate-monitor-orbit {
+  animation: monitorOrbit 24s linear infinite;
+}
+
+.animate-monitor-orbit-reverse {
+  animation: monitorOrbit 20s linear infinite reverse;
 }
 
 @keyframes ingestPacket {

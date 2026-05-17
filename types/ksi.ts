@@ -5,6 +5,9 @@ export type KsiItem = {
   name: string;
   description: string;
   group?: string;
+  groupId?: string;
+  groupName?: string;
+  groupTheme?: string;
   tags?: string[];
 };
 

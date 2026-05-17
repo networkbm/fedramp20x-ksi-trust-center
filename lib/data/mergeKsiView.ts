@@ -9,7 +9,12 @@ export type KsiViewItem = KsiItem & {
 };
 
 export type KsiView = {
-  meta: Record<string, unknown>;
+  meta: {
+    ksi_source_count: number;
+    status_source_count: number;
+    framework?: unknown;
+    last_updated?: unknown;
+  };
   items: KsiViewItem[];
 };
 

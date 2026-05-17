@@ -72,20 +72,20 @@ export default function KsiValidation({ ksiId }: { ksiId: string }) {
   const canSave = threePao.trim().length > 0 && assessorName.trim().length > 0;
 
   return (
-    <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-6">
+    <div className="rounded-xl border border-white/10 bg-[#121217] p-6 shadow-sm">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <div className="text-sm font-semibold">Validation</div>
-          <div className="mt-1 text-xs text-white/50">Assessor attestation for this KSI</div>
+          <div className="text-sm font-bold text-white">Validation</div>
+          <div className="mt-1 font-mono text-[10px] uppercase tracking-wider text-slate-500">Assessor attestation for this KSI</div>
         </div>
 
         <div className="flex items-center gap-2">
           {loaded && record ? (
-            <span className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-200">
+            <span className="rounded-md border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-300">
               Validated
             </span>
           ) : (
-            <span className="rounded-full border border-white/15 bg-white/[0.03] px-3 py-1 text-xs text-white/60">
+            <span className="rounded-md border border-white/10 bg-[#09090b] px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-slate-400">
               Not validated
             </span>
           )}
@@ -93,7 +93,7 @@ export default function KsiValidation({ ksiId }: { ksiId: string }) {
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="rounded-xl border border-white/15 bg-white/[0.03] px-4 py-2 text-xs text-white/80 hover:bg-white/[0.05]"
+            className="rounded-md border border-emerald-500/20 bg-emerald-500/10 px-4 py-2 font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-300 transition hover:bg-emerald-500/15"
           >
             {record ? "Edit" : "Validate KSI"}
           </button>
@@ -101,65 +101,65 @@ export default function KsiValidation({ ksiId }: { ksiId: string }) {
       </div>
 
       {loaded && record ? (
-        <div className="mt-4 rounded-2xl border border-white/15 bg-white/[0.03] p-4">
-          <div className="text-xs text-white/50">Validated by</div>
-          <div className="mt-1 text-sm font-semibold text-white/90">{record.three_pao}</div>
-          <div className="mt-2 text-sm text-white/70">
+        <div className="mt-4 rounded-xl border border-white/10 bg-[#09090b] p-4">
+          <div className="font-mono text-[10px] uppercase tracking-wider text-slate-500">Validated by</div>
+          <div className="mt-1 text-sm font-semibold text-white">{record.three_pao}</div>
+          <div className="mt-2 text-sm text-slate-400">
             {record.assessor_name}
-            <span className="text-white/40"> · </span>
+            <span className="text-slate-600"> · </span>
             {new Date(record.validated_at).toLocaleString()}
           </div>
         </div>
       ) : (
-        <div className="mt-4 text-sm text-white/60">
-          No validation recorded yet. Click <span className="font-semibold text-white/80">Validate KSI</span> to add it.
+        <div className="mt-4 rounded-xl border border-white/10 bg-[#09090b] p-4 text-sm text-slate-400">
+          No validation recorded yet. Click <span className="font-semibold text-slate-200">Validate KSI</span> to add it.
         </div>
       )}
 
       {open ? (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/55 p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm"
           onMouseDown={(e) => {
             if (e.target === e.currentTarget) setOpen(false);
           }}
         >
-          <div className="w-full max-w-lg rounded-2xl border border-white/15 bg-white/[0.03] shadow-[0_20px_80px_rgba(0,0,0,0.6)]">
-            <div className="border-b border-white/15 px-5 py-4">
-              <div className="text-sm font-semibold">Validate KSI</div>
-              <div className="mt-1 text-xs text-white/50">{ksiId}</div>
+          <div className="w-full max-w-lg overflow-hidden rounded-xl border border-white/10 bg-[#121217] shadow-[0_20px_80px_rgba(0,0,0,0.72)]">
+            <div className="border-b border-white/10 bg-[#09090b] px-5 py-4">
+              <div className="text-sm font-bold text-white">Validate KSI</div>
+              <div className="mt-1 font-mono text-[10px] uppercase tracking-wider text-slate-500">{ksiId}</div>
             </div>
 
             <div className="space-y-4 px-5 py-5">
               <div className="space-y-2">
-                <div className="text-xs text-white/60">3PAO</div>
+                <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-slate-500">3PAO</div>
                 <input
                   value={threePao}
                   onChange={(e) => setThreePao(e.target.value)}
                   placeholder="Insert here..."
-                  className="w-full rounded-xl border border-white/15 bg-white/[0.03] px-3 py-2 text-sm text-white/80 placeholder:text-white/30 outline-none focus:border-white/20 focus:bg-white/[0.06]"
+                  className="w-full rounded-lg border border-white/10 bg-[#09090b] px-3 py-2 text-sm text-slate-100 placeholder:text-slate-600 outline-none transition focus:border-emerald-500/35 focus:bg-[#0d1110]"
                 />
               </div>
 
               <div className="space-y-2">
-                <div className="text-xs text-white/60">Assessor name</div>
+                <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-slate-500">Assessor name</div>
                 <input
                   value={assessorName}
                   onChange={(e) => setAssessorName(e.target.value)}
                   placeholder="Insert here..."
-                  className="w-full rounded-xl border border-white/15 bg-white/[0.03] px-3 py-2 text-sm text-white/80 placeholder:text-white/30 outline-none focus:border-white/20 focus:bg-white/[0.06]"
+                  className="w-full rounded-lg border border-white/10 bg-[#09090b] px-3 py-2 text-sm text-slate-100 placeholder:text-slate-600 outline-none transition focus:border-emerald-500/35 focus:bg-[#0d1110]"
                 />
               </div>
 
-              <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-4 text-xs text-white/60">
+              <div className="rounded-xl border border-amber-500/15 bg-amber-500/[0.06] p-4 text-xs leading-5 text-amber-100/70">
                 This is a demo no real data.
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/15 px-5 py-4">
+            <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/10 bg-[#09090b] px-5 py-4">
               <button
                 type="button"
                 onClick={() => setOpen(false)}
-                className="rounded-xl border border-white/15 bg-white/[0.03] px-4 py-2 text-xs text-white/70 hover:bg-white/[0.05]"
+                className="rounded-md border border-white/10 bg-[#121217] px-4 py-2 font-mono text-[10px] font-bold uppercase tracking-wider text-slate-300 transition hover:bg-white/[0.06]"
               >
                 Cancel
               </button>
@@ -169,7 +169,7 @@ export default function KsiValidation({ ksiId }: { ksiId: string }) {
                   <button
                     type="button"
                     onClick={clear}
-                    className="rounded-xl border border-rose-400/20 bg-rose-500/10 px-4 py-2 text-xs text-rose-200 hover:bg-rose-500/15"
+                    className="rounded-md border border-rose-500/20 bg-rose-500/10 px-4 py-2 font-mono text-[10px] font-bold uppercase tracking-wider text-rose-300 transition hover:bg-rose-500/15"
                   >
                     Clear validation
                   </button>
@@ -179,10 +179,10 @@ export default function KsiValidation({ ksiId }: { ksiId: string }) {
                   type="button"
                   disabled={!canSave}
                   onClick={save}
-                  className={`rounded-xl border px-4 py-2 text-xs ${
+                  className={`rounded-md border px-4 py-2 font-mono text-[10px] font-bold uppercase tracking-wider transition ${
                     canSave
-                      ? "border-emerald-400/20 bg-emerald-400/10 text-emerald-200 hover:bg-emerald-400/15"
-                      : "border-white/15 bg-white/[0.02] text-white/35"
+                      ? "border-emerald-500/20 bg-emerald-500/10 text-emerald-300 hover:bg-emerald-500/15"
+                      : "border-white/10 bg-[#121217] text-slate-600"
                   }`}
                 >
                   Save validation

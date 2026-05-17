@@ -5,12 +5,14 @@ as its source of truth for compliance objectives and descriptions.
 
 ## Source
 - Repository: FedRAMP official documentation
-- File: FRMR.KSI.key-security-indicators.json
+- File: FRMR.documentation.json
 - URL:
-  https://github.com/FedRAMP/docs/blob/main/data/FRMR.KSI.key-security-indicators.json
+  https://github.com/FedRAMP/docs/blob/main/FRMR.documentation.json
+- Version reviewed: 0.9.43-beta
+- Source last updated: 2026-04-08
 
 ## Usage in this Project
-- KSI definitions and descriptions are used verbatim.
+- KSI definitions and descriptions are sourced from FedRAMP's machine-readable documentation.
 - PASS / FAIL / PENDING status values are **demonstration-only** and are
   not an official FedRAMP assessment or authorization.
 - This project is intended for educational and portfolio demonstration

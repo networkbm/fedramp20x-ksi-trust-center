@@ -25,7 +25,7 @@ export default function KsiFilters({
     "border-white/15 bg-white/[0.03] text-white/70 hover:bg-white/[0.05] hover:text-white";
 
   const pillActive =
-    "border-slate-300/20 bg-slate-200/[0.08] text-white shadow-[0_0_22px_rgba(125,211,252,0.08)]";
+    "border-emerald-500/25 bg-emerald-500/[0.10] text-emerald-100 shadow-[0_0_22px_rgba(16,185,129,0.08)]";
 
   const badgeBase =
     "rounded-full border border-white/15 bg-white/[0.03] px-2 py-0.5 text-[11px] text-white/60";

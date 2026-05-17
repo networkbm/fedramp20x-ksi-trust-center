@@ -85,7 +85,7 @@ function scoreKsiMatch(prompt: string, item: EnrichedKsiItem) {
   return score;
 }
 
-export function findMatchedKsis(prompt: string, items: KsiViewItem[], validations: ValidationRecord[], limit = 6): AiMatchedKsi[] {
+function findMatchedKsis(prompt: string, items: KsiViewItem[], validations: ValidationRecord[], limit = 6): AiMatchedKsi[] {
   const enriched = enrichItems(items, validations);
   const filteredPool = wantsValidatedOnly(prompt)
     ? enriched.filter((item) => item.validation)
@@ -134,7 +134,7 @@ function buildGroupBreakdown(items: KsiViewItem[]) {
     .map(([label, value]) => ({ label, total: value }));
 }
 
-export function buildChartFromPrompt(prompt: string, items: KsiViewItem[], history: KsiHistoryPoint[]): AiChart | null {
+function buildChartFromPrompt(prompt: string, items: KsiViewItem[], history: KsiHistoryPoint[]): AiChart | null {
   const normalized = prompt.toLowerCase();
   const wantsChart = /(chart|graph|plot|visual|visualize|trend|breakdown|bar|line)/.test(normalized);
   if (!wantsChart) return null;
@@ -303,7 +303,7 @@ export async function queryOllamaForKsis({
     const selected = matchedKsis.filter((item) => focusIds.size === 0 || focusIds.has(item.id));
 
     return {
-      answer: parsed.answer?.trim() || buildFallbackAnswer(prompt, items),
+      answer: parsed.answer?.trim() || buildFallbackAnswer(prompt, items, validations),
       prompt,
       matchedKsis: selected.length > 0 ? selected : matchedKsis,
       chart,

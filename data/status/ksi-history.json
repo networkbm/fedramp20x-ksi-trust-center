@@ -5,19 +5,89 @@
     "notes": "Demo trend data for PASS/FAIL/PENDING over time."
   },
   "points": [
-    { "date": "2026-02-27", "PASS": 4, "FAIL": 1, "PENDING": 62 },
-    { "date": "2026-02-28", "PASS": 4, "FAIL": 1, "PENDING": 62 },
-    { "date": "2026-03-01", "PASS": 5, "FAIL": 1, "PENDING": 61 },
-    { "date": "2026-03-02", "PASS": 5, "FAIL": 1, "PENDING": 61 },
-    { "date": "2026-03-03", "PASS": 5, "FAIL": 1, "PENDING": 61 },
-    { "date": "2026-03-04", "PASS": 5, "FAIL": 1, "PENDING": 61 },
-    { "date": "2026-03-05", "PASS": 6, "FAIL": 1, "PENDING": 60 },
-    { "date": "2026-03-06", "PASS": 6, "FAIL": 1, "PENDING": 60 },
-    { "date": "2026-03-07", "PASS": 6, "FAIL": 1, "PENDING": 60 },
-    { "date": "2026-03-08", "PASS": 7, "FAIL": 0, "PENDING": 60 },
-    { "date": "2026-03-09", "PASS": 7, "FAIL": 0, "PENDING": 60 },
-    { "date": "2026-03-10", "PASS": 8, "FAIL": 0, "PENDING": 59 },
-    { "date": "2026-03-11", "PASS": 9, "FAIL": 0, "PENDING": 58 },
-    { "date": "2026-03-12", "PASS": 10, "FAIL": 0, "PENDING": 57 }
+    {
+      "date": "2026-04-10",
+      "PASS": 42,
+      "FAIL": 5,
+      "PENDING": 13
+    },
+    {
+      "date": "2026-04-11",
+      "PASS": 43,
+      "FAIL": 5,
+      "PENDING": 12
+    },
+    {
+      "date": "2026-04-12",
+      "PASS": 44,
+      "FAIL": 5,
+      "PENDING": 11
+    },
+    {
+      "date": "2026-04-13",
+      "PASS": 45,
+      "FAIL": 5,
+      "PENDING": 10
+    },
+    {
+      "date": "2026-04-14",
+      "PASS": 46,
+      "FAIL": 5,
+      "PENDING": 9
+    },
+    {
+      "date": "2026-04-15",
+      "PASS": 47,
+      "FAIL": 5,
+      "PENDING": 8
+    },
+    {
+      "date": "2026-04-16",
+      "PASS": 48,
+      "FAIL": 5,
+      "PENDING": 7
+    },
+    {
+      "date": "2026-04-17",
+      "PASS": 49,
+      "FAIL": 5,
+      "PENDING": 6
+    },
+    {
+      "date": "2026-04-18",
+      "PASS": 50,
+      "FAIL": 5,
+      "PENDING": 5
+    },
+    {
+      "date": "2026-04-19",
+      "PASS": 51,
+      "FAIL": 5,
+      "PENDING": 4
+    },
+    {
+      "date": "2026-04-20",
+      "PASS": 52,
+      "FAIL": 5,
+      "PENDING": 3
+    },
+    {
+      "date": "2026-04-21",
+      "PASS": 53,
+      "FAIL": 5,
+      "PENDING": 2
+    },
+    {
+      "date": "2026-04-22",
+      "PASS": 54,
+      "FAIL": 5,
+      "PENDING": 1
+    },
+    {
+      "date": "2026-04-23",
+      "PASS": 55,
+      "FAIL": 5,
+      "PENDING": 0
+    }
   ]
 }

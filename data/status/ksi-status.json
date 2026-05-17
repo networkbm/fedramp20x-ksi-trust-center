@@ -2,105 +2,547 @@
   "meta": {
     "framework": "FedRAMP 20x Key Security Indicators",
     "environment": "demo",
-    "last_updated": "2026-03-12",
-    "notes": "Demo Data"
+    "last_updated": "2026-05-17",
+    "notes": "Demo data - continuous monitoring snapshot",
+    "source_version": "0.9.43-beta",
+    "source_last_updated": "2026-04-08"
   },
-
   "statuses": {
-    "KSI-IAM-01": {
+    "KSI-AFR-ADS": {
       "status": "PASS",
-      "last_verified": "2026-01-10",
-      "summary": "Multi-factor authentication is enforced for all privileged and remote access users.",
-      "evidence": [
-        "iam-mfa-report.pdf",
-        "privileged-access-review-q4.pdf"
-      ]
-    },
-
-    "KSI-IAM-02": {
-      "status": "PASS",
-      "last_verified": "2026-01-08",
-      "summary": "User accounts are provisioned, reviewed, and deprovisioned according to documented procedures.",
-      "evidence": [
-        "account-lifecycle-procedure.pdf",
-        "access-review-log.csv"
-      ]
-    },
-
-    "KSI-IAM-03": {
-      "status": "PASS",
-      "last_verified": "2026-03-11",
-      "summary": "Privileged access pathways are reviewed with approval checkpoints and supporting evidence retained.",
-      "evidence": [
-        "privileged-access-review-q4.pdf",
-        "iam-mfa-report.pdf"
-      ]
-    },
-
-    "KSI-IAM-04": {
-      "status": "PASS",
-      "last_verified": "2026-03-12",
-      "summary": "Session and authentication controls were validated against current access policy expectations.",
-      "evidence": [
-        "iam-mfa-report.pdf",
-        "privileged-access-review-q4.pdf"
-      ]
-    },
-
-    "KSI-IAM-05": {
-      "status": "PASS",
-      "last_verified": "2026-03-09",
-      "summary": "Privileged role boundaries and entitlement controls were validated in the latest review cycle.",
-      "evidence": [
-        "privileged-access-review-q4.pdf",
-        "iam-mfa-report.pdf"
-      ]
-    },
-
-    "KSI-SVC-01": {
-      "status": "PASS",
-      "last_verified": "2026-03-10",
-      "summary": "Service-level control baselines are now continuously checked and reported within the assurance pipeline.",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
       "evidence": [
         "audit-logging-enabled.png",
         "asset-inventory.csv"
       ]
     },
-
-    "KSI-SVC-05": {
+    "KSI-AFR-CCM": {
       "status": "PASS",
-      "last_verified": "2026-03-07",
-      "summary": "Deployment and service integrity checks now pass automated validation criteria.",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-AFR-FSI": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-AFR-ICP": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-AFR-MAS": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-AFR-PVA": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-AFR-SCG": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-AFR-SCN": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-AFR-UCM": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-AFR-VDR": {
+      "status": "FAIL",
+      "last_verified": "2026-04-18",
+      "summary": "Automated validation found a documentation or telemetry gap requiring remediation evidence before the next assessment cycle.",
       "evidence": [
         "vulnerability-scan-summary.pdf",
+        "incident-response-plan.pdf"
+      ]
+    },
+    "KSI-CMT-LMC": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
         "asset-inventory.csv"
       ]
     },
-
-    "KSI-SVC-04": {
+    "KSI-CMT-RMV": {
       "status": "PASS",
-      "last_verified": "2026-03-08",
-      "summary": "Service assurance checkpoints include documented escalation and remediation evidence.",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
       "evidence": [
-        "incident-response-plan.pdf",
-        "log-retention-policy.pdf"
-      ]
-    },
-
-    "KSI-SVC-08": {
-      "status": "PASS",
-      "last_verified": "2026-03-06",
-      "summary": "Service recovery evidence and operational readiness checks were added to the latest assurance cycle.",
-      "evidence": [
-        "incident-response-plan.pdf",
+        "audit-logging-enabled.png",
         "asset-inventory.csv"
       ]
     },
-
-    "KSI-SVC-02": {
+    "KSI-CMT-RVP": {
       "status": "PASS",
-      "last_verified": "2026-03-12",
-      "summary": "Service baseline controls were re-verified in the latest continuous assurance run.",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-CMT-VTD": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-CNA-DFP": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-CNA-EIS": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-CNA-IBP": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-CNA-MAT": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-CNA-OFA": {
+      "status": "FAIL",
+      "last_verified": "2026-04-18",
+      "summary": "Automated validation found a documentation or telemetry gap requiring remediation evidence before the next assessment cycle.",
+      "evidence": [
+        "vulnerability-scan-summary.pdf",
+        "incident-response-plan.pdf"
+      ]
+    },
+    "KSI-CNA-RNT": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-CNA-RVP": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-CNA-ULN": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-CED-DET": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-CED-RGT": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-CED-RRT": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-CED-RST": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-IAM-AAM": {
+      "status": "FAIL",
+      "last_verified": "2026-04-18",
+      "summary": "Automated validation found a documentation or telemetry gap requiring remediation evidence before the next assessment cycle.",
+      "evidence": [
+        "vulnerability-scan-summary.pdf",
+        "incident-response-plan.pdf"
+      ]
+    },
+    "KSI-IAM-APM": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-IAM-ELP": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-IAM-JIT": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-IAM-MFA": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-IAM-SNU": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-IAM-SUS": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-INR-AAR": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-INR-RIR": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-INR-RPI": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-MLA-ALA": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-MLA-EVC": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-MLA-LET": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-MLA-OSM": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-MLA-RVL": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-PIY-GIV": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-PIY-RES": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-PIY-RIS": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-PIY-RSD": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-PIY-RVD": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-RPL-ABO": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-RPL-ARP": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-RPL-RRO": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-RPL-TRC": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-SVC-ACM": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-SVC-ASM": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-SVC-EIS": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-SVC-PRR": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-SVC-RUD": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-SVC-SNT": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-SVC-VCM": {
+      "status": "FAIL",
+      "last_verified": "2026-04-18",
+      "summary": "Automated validation found a documentation or telemetry gap requiring remediation evidence before the next assessment cycle.",
+      "evidence": [
+        "vulnerability-scan-summary.pdf",
+        "incident-response-plan.pdf"
+      ]
+    },
+    "KSI-SVC-VRI": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
+      "evidence": [
+        "audit-logging-enabled.png",
+        "asset-inventory.csv"
+      ]
+    },
+    "KSI-SCR-MIT": {
+      "status": "FAIL",
+      "last_verified": "2026-04-18",
+      "summary": "Automated validation found a documentation or telemetry gap requiring remediation evidence before the next assessment cycle.",
+      "evidence": [
+        "vulnerability-scan-summary.pdf",
+        "incident-response-plan.pdf"
+      ]
+    },
+    "KSI-SCR-MON": {
+      "status": "PASS",
+      "last_verified": "2026-04-22",
+      "summary": "Automated validation passed with current telemetry, policy, and evidence mappings in the continuous monitoring pipeline.",
       "evidence": [
         "audit-logging-enabled.png",
         "asset-inventory.csv"
